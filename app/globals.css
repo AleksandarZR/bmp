@@ -4,10 +4,10 @@
 
 :root {
     --background: #ffffff;
-    --foreground: #171717;
+    --foreground: #ffffff;
 
     --color1: rgb(0, 0, 0);
-    --color1-transparent: rgba(0, 0, 0, 0.75);
+    --color1-transparent: rgba(0, 0, 0, 0.9);
     --color2: rgb(32, 32, 32);
     --color2-transparent: rgba(32, 32, 32, 0.75);
     --color3: rgb(67, 67, 67);
@@ -18,10 +18,11 @@
     --color5-transparent: rgba(145, 145, 145, 0.75);
 
     --color6: rgba(242, 179, 18, 1);
-    --color7: rgba(98, 177, 85, 1);
+    --color7: rgba(0, 255, 222, 1);
     --color8: rgba(255, 0, 0, 1);
     --color9: rgba(55, 195, 236, 1);
     --color10: rgb(43, 76, 93);
+    --color11: rgb(43, 76, 93);
 }
 
 @media (prefers-color-scheme: dark) {

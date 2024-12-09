@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/public/svg/logo-mob.svg";
+import logo from "@/public/images/logo.png";
 
 const LogoMob = ({ session }: any) => {
     return (
@@ -13,7 +13,7 @@ const LogoMob = ({ session }: any) => {
                 <Image
                     src={logo}
                     alt="Logo"
-                    className="min-h-12 h-12 min-w-12 w-12"
+                    className="min-h-12 h-16 min-w-12 w-16"
                 />
             </Link>
         </>

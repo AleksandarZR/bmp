@@ -69,7 +69,7 @@ const DropDownMenu = ({ session }: { session: Session }) => {
             <div
                 className={
                     dropDownVisible
-                        ? "lg:hidden sm:flex flex-col justify-start fixed left-0 bg-primary-color-transparent w-60 pt-4 pb-5 top-20 font-3xl"
+                        ? "lg:hidden sm:flex flex-col justify-start fixed left-0 bg-color1-transparent w-60 pt-4 pb-5 top-20 font-3xl"
                         : "hidden"
                 }
                 style={{ fontSize: "1.5rem" }}
@@ -89,7 +89,7 @@ const DropDownMenu = ({ session }: { session: Session }) => {
                         <div
                             className={
                                 submenuProjectsVisible
-                                    ? "absolute top-0 left-[165px] flex flex-col pl-2 pr-2 bg-primary-color-transparent w-40"
+                                    ? "absolute top-0 left-[165px] flex flex-col pl-2 pr-2 bg-color1-transparent w-40"
                                     : "hidden"
                             }
                         >
