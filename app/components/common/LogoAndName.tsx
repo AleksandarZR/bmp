@@ -8,9 +8,9 @@ const LogoAndName = ({ session }: any) => {
         <>
             <Link
                 href={session?.user?.isAdmin ? "/admin" : "/"}
-                className="relative min-h-12 min-w-32 flex flex-row justify-start items-center content-start"
+                className="relative min-h-12 min-w-12 flex flex-row justify-start items-center content-start"
             >
-                <Image src={logo} alt="Logo" className="pr-2 h-16 w-auto" />
+                <Image src={logo} alt="Logo" className="h-12 w-auto" />
             </Link>
         </>
     );

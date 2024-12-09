@@ -13,7 +13,7 @@ const LogoMob = ({ session }: any) => {
                 <Image
                     src={logo}
                     alt="Logo"
-                    className="min-h-12 h-16 min-w-12 w-16"
+                    className="min-h-12 h-12 min-w-12 w-auto"
                 />
             </Link>
         </>

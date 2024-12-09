@@ -40,6 +40,18 @@ const config: Config =  {
                 space3: "24px",
                 space4: "32px",
                 space5: "40px",
+
+                space11: "8px",
+                space12: "16px",
+                space13: "24px",
+                space14: "32px",
+                space15: "40px",
+
+                space21: "8px",
+                space22: "16px",
+                space23: "24px",
+                space24: "32px",
+                space25: "40px",
             },
         },
         screens: {
