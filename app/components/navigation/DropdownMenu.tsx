@@ -3,46 +3,48 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import hamburger2 from "@/public/svg/hamburger.svg";
-///import { useClickOutside } from "@/app/hooks/useOutsideClick";
+import { useClickOutside } from "@/app/hooks/useOutsideClick";
 import LogoutButtonArrow from "@/app/components/common/ButtonLogoutArrow";
 import { Session } from "next-auth";
 import ButtonLoginArrow from "@/app/components/common/ButtonLoginArrow";
+import Arrow from "../common/Arrow";
 
 const DropDownMenu = ({ session }: { session: Session }) => {
-    const [submenuProjectsVisible, setSubmenuProjectsVisible] = useState(false);
+    const [submenuParallaxVisible, setSubmenuParallaxVisible] = useState(false);
+    const [submenuComponentsVisible, setSubmenuComponentsVisible] = useState(false);
     const dropdownRef = useRef<HTMLDivElement | null>(null);
     const pathname = usePathname();
     const router = useRouter();
     const lang = pathname.split("/")[1];
     const [dropDownVisible, setDropDownVisible] = useState(false);
 
-    /* useClickOutside(dropdownRef, () => {
+    useClickOutside(dropdownRef, () => {
         setDropDownVisible(false);
-        setSubmenuProjectsVisible(false);
-    }); */
+        setSubmenuParallaxVisible(false);
+        setSubmenuComponentsVisible(false);
+    });
 
-    const isActive = (href: string) => pathname === `/${lang}${href}`;
-    const isLanguageActive = (language: string) => lang === language;
+    const isActive = (href: string) => pathname === `${href}`;
 
-    const handleProjectsClicked = () => {
-        setSubmenuProjectsVisible((prev) => !prev);
+    const handleParallaxClicked = () => {
+        setSubmenuComponentsVisible(false);
+        setSubmenuParallaxVisible((prev) => !prev);
+    };
+
+    const handleComponentsClicked = () => {
+        setSubmenuComponentsVisible((prev) => !prev);
+        setSubmenuParallaxVisible(false);
     };
 
     const handleLinkClick = () => {
         setDropDownVisible(false);
-        setSubmenuProjectsVisible(false);
-    };
-
-    const handleChangeLang = (newLanguage: string) => {
-        if (lang !== newLanguage) {
-            const newPathname = pathname.replace(`/${lang}`, `/${newLanguage}`);
-            router.push(newPathname);
-        }
+        setSubmenuParallaxVisible(false);
+        setSubmenuComponentsVisible(false);
     };
 
     const renderLink = (href: string, label: string) => (
         <Link
-            href={`/${lang}${href}`}
+            href={`${href}`}
             className={
                 isActive(href)
                     ? "pt-1 pb-1 font-extrabold text-button-background-color"
@@ -75,39 +77,49 @@ const DropDownMenu = ({ session }: { session: Session }) => {
                 style={{ fontSize: "1.5rem" }}
             >
                 <div className="flex flex-col justify-center items-center w-full">
-                    {renderLink(
-                        "/how-it-works",
-                        "aaa"
-                    )}
                     <div className="relative">
                         <div
                             className="pt-1 pb-1 font-3xl cursor-pointer text-text-color-blue"
-                            onClick={handleProjectsClicked}
+                            onClick={handleComponentsClicked}
                         >
-                            bbb
+                            Components
                         </div>
                         <div
                             className={
-                                submenuProjectsVisible
+                                submenuComponentsVisible
+                                    ? "absolute top-0 left-[189px] flex flex-col pl-2 pr-2 bg-color1-transparent w-40"
+                                    : "hidden"
+                            }
+                        >
+                            {renderLink("/pages/components1", "Components1")}
+                            {renderLink("/pages/components2", "Components2")}
+                        </div>
+                    </div>
+
+                    <div className="relative">
+                        <div
+                            className="pt-1 pb-1 font-3xl cursor-pointer text-text-color-blue"
+                            onClick={handleParallaxClicked}
+                        >
+                            Parallax
+                        </div>
+                        <div
+                            className={
+                                submenuParallaxVisible
                                     ? "absolute top-0 left-[165px] flex flex-col pl-2 pr-2 bg-color1-transparent w-40"
                                     : "hidden"
                             }
                         >
-                            {renderLink(
-                                "/projects/solar-token",
-                                "ccc"
-                            )}
+                            {renderLink("/pages/parallax1", "Parallax effect1")}
+                            {renderLink("/pages/parallax2", "Parallax effect2")}
                         </div>
                     </div>
 
-                    {renderLink("/about-us", "ddd")}
-                    {renderLink("/investing", "eee")}
-                    {renderLink("/faq", "fff")}
-                    {renderLink("/contact", "ggg")}
-                    {renderLink("/news", "hhh")}
+
+                    {renderLink("/settings", "Settings")}
                     <div className="p-2">
                         {!session && (
-                            <ButtonLoginArrow text={"Login"} link={"/login"} />
+                            <Arrow/>
                         )}
                         {session && <LogoutButtonArrow />}
                     </div>
@@ -115,6 +127,8 @@ const DropDownMenu = ({ session }: { session: Session }) => {
                         
                     </div>
                 </div>
+
+                
             </div>
         </div>
     );

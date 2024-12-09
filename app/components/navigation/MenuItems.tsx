@@ -29,7 +29,7 @@ const MenuItems = () => {
             className={
                 isActive(href)
                     ? "block pl-3 pr-3 pb-0.5 pt-0 border-y-16 text-button-background-color font-extrabold scale-125"
-                    : "block pl-3 pr-3 pb-0 pt-0 border-y-16 no-underline text-text-color-blue"
+                    : "block pl-3 pr-3 pb-0 pt-0 border-y-16 no-underline text-text-color-blue font-3xl"
             }
         >
             {label}
@@ -53,7 +53,7 @@ const MenuItems = () => {
                     }}
                 >
                     {/* Menu Item */}
-                    <div onClick={handleComponentsClicked}>
+                    <div onClick={handleComponentsClicked} className="font-3xl">
                         Components
                     </div>
 
