@@ -24,7 +24,7 @@ const MenuItems = () => {
 
     const renderLink = (href: string, label: string) => (
         <Link
-            href={`/${href}`}
+            href={href}
             onClick={handleLinkClick}
             className={
                 isActive(href)
