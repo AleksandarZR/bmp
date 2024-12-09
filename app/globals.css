@@ -6,12 +6,14 @@
     --background: #ffffff;
     --foreground: #ffffff;
 
+    --color0: rgb(255, 255, 255);
+    --color0-transparent: rgba(255, 255, 255, 0.5);
     --color1: rgb(0, 0, 0);
     --color1-transparent: rgba(0, 0, 0, 0.9);
     --color2: rgb(32, 32, 32);
     --color2-transparent: rgba(32, 32, 32, 0.75);
-    --color3: rgb(67, 67, 67);
-    --color3-transparent: rgba(67, 67, 67, 0.75);
+    --color3: rgb(77, 58, 58);
+    --color3-transparent: rgba(77, 77, 58, 0.75);
     --color4: rgb(111, 111, 111);
     --color4-transparent: rgba(111, 111, 111, 0.75);
     --color5: rgb(145, 145, 145);

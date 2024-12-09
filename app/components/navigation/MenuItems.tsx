@@ -4,31 +4,27 @@ import { usePathname, useRouter } from "next/navigation";
 import { Session } from "next-auth";
 
 const MenuItems = () => {
-    const [submenuProjectsVisible, setSubmenuProjectsVisible] = useState(false);
+    const [submenuComponentsVisible, setSubmenuComponentsVisible] = useState(false);
+    const [submenuParallaxVisible, setSubmenuParallaxVisible] = useState(false);
     const pathname = usePathname();
     const router = useRouter();
-    const lang = pathname.split("/")[1];
 
-    const isActive = (href: string) => pathname === `/${lang}${href}`;
-    const isLanguageActive = (language: string) => lang === language;
+    const isActive = (href: string) => pathname === `/${href}`;
 
-    const handleChangeLang = (newLanguage: string) => {
-        if (lang !== newLanguage) {
-            const newPathname = pathname.replace(`/${lang}`, `/${newLanguage}`);
-            router.push(newPathname);
-        }
-    };
+    const handleComponentsClicked = () =>
+        setSubmenuComponentsVisible((prev) => !prev);
 
-    const handleProjectsClicked = () =>
-        setSubmenuProjectsVisible((prev) => !prev);
+    const handleParallaxClicked = () =>
+        setSubmenuParallaxVisible((prev) => !prev);
 
     const handleLinkClick = () => {
-        setSubmenuProjectsVisible(false);
+        setSubmenuComponentsVisible(false);
+        setSubmenuParallaxVisible(false);
     };
 
     const renderLink = (href: string, label: string) => (
         <Link
-            href={`/${lang}${href}`}
+            href={`/${href}`}
             onClick={handleLinkClick}
             className={
                 isActive(href)
@@ -43,42 +39,72 @@ const MenuItems = () => {
     return (
         <div className="w-full flex justify-center">
             <div className="flex flex-row justify-center items-center space-x-4 text-nowrap">
-                {renderLink("/how-it-works", "aaa")}
-
+                {/* Container for menu item with submenu items */}
                 <div
                     className="relative pl-3 pr-3 pb-0 pt-0 border-y-16 cursor-pointer no-underline text-text-color-blue"
                     tabIndex={0}
-                    
+
                     onBlur={(e) => {
                         if (
                             !e.currentTarget.contains(e.relatedTarget as Node)
                         ) {
-                            setSubmenuProjectsVisible(false);
+                            setSubmenuComponentsVisible(false);
                         }
                     }}
                 >
-                    <div onClick={handleProjectsClicked}>
-                        bbb
+                    {/* Menu Item */}
+                    <div onClick={handleComponentsClicked}>
+                        Components
                     </div>
+
+                    {/* Submenu items */}
                     <div
                         className={
-                            submenuProjectsVisible
-                                ? "flex flex-col absolute pl-2 pr-2 bg-primary-color-transparent w-36"
+                            submenuComponentsVisible
+                                ? "flex flex-col absolute pl-2 pr-2 bg-color1-transparent w-36"
                                 : "hidden"
                         }
                         style={{ top: "53px" }}
                     >
-                        {renderLink(
-                            "/projects/solar-token",
-                            "ccc"
-                        )}
+                        {renderLink("/pages/components1", "Components 1")}
+                        {renderLink("/pages/components2", "Components 2")}
                     </div>
                 </div>
 
-                {renderLink("/about-us", "ddd")}
-                {renderLink("/faq", "eee")}
-                {renderLink("/contact", "fff")}
-                {renderLink("/news", "ggg")}
+
+                {/* Container for menu item with submenu items */}
+                <div
+                    className="relative pl-3 pr-3 pb-0 pt-0 border-y-16 cursor-pointer no-underline text-text-color-blue"
+                    tabIndex={0}
+
+                    onBlur={(e) => {
+                        if (
+                            !e.currentTarget.contains(e.relatedTarget as Node)
+                        ) {
+                            setSubmenuParallaxVisible(false);
+                        }
+                    }}
+                >
+                    {/* Menu Item */}
+                    <div onClick={handleParallaxClicked}>
+                        Parallax
+                    </div>
+
+                    {/* Submenu items */}
+                    <div
+                        className={
+                            submenuParallaxVisible
+                                ? "flex flex-col absolute pl-2 pr-2 bg-color1-transparent w-36"
+                                : "hidden"
+                        }
+                        style={{ top: "53px" }}
+                    >
+                        {renderLink("/pages/parallax1", "Parallax effect 1")}
+                        {renderLink("/pages/parallax2", "Parallax effect 2")}
+                    </div>
+                </div>
+
+                {renderLink("/technical-settings", "Settings")}
             </div>
         </div>
     );

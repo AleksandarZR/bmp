@@ -16,13 +16,6 @@ const Navigation = ({ session }: any) => {
     const router = useRouter();
     const lang = pathname.split("/")[1];
 
-    const handleLanguageChange = (newLang: string) => {
-        if (lang !== newLang) {
-            const newPathname = pathname.replace(`/${lang}`, `/${newLang}`);
-            router.push(newPathname);
-        }
-    };
-
     return (
         <>
             {/* Desktop Navigation */}
@@ -38,7 +31,7 @@ const Navigation = ({ session }: any) => {
                 )}
                 
                 {!session && (
-                    <ButtonLoginArrow text={"Login"} link={"/login"} />
+                    <Arrow/>
                 )}
                 {session && <LogoutButtonArrow />}
             </div>

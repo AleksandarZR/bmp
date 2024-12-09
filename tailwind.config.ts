@@ -11,6 +11,8 @@ const config: Config =  {
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
+                "color0": "var(--color0)",
+                "color0-transparent": "var(--color0-transparent)",
                 "color1": "var(--color1)",
                 "color1-transparent": "var(--color1-transparent)",
                 "color2": "var(--color2)",
