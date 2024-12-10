@@ -104,7 +104,7 @@ const MenuItems = () => {
                     </div>
                 </div>
 
-                {renderLink("/technical-settings", "Settings")}
+                {renderLink("/pages/settings", "Settings")}
             </div>
         </div>
     );
