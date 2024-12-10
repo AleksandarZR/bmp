@@ -87,7 +87,7 @@ const DropDownMenu = ({ session }: { session: Session }) => {
                         <div
                             className={
                                 submenuComponentsVisible
-                                    ? "absolute top-0 left-[189px] flex flex-col pl-2 pr-2 bg-color1-transparent w-40"
+                                    ? "absolute top-0 left-[189px] flex flex-col pl-2 pr-2 bg-color1-transparent w-42"
                                     : "hidden"
                             }
                         >
@@ -106,7 +106,7 @@ const DropDownMenu = ({ session }: { session: Session }) => {
                         <div
                             className={
                                 submenuParallaxVisible
-                                    ? "absolute top-0 left-[165px] flex flex-col pl-2 pr-2 bg-color1-transparent w-40"
+                                    ? "absolute top-0 left-[165px] flex flex-col pl-2 pr-2 bg-color1-transparent w-60"
                                     : "hidden"
                             }
                         >
