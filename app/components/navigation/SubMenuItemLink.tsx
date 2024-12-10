@@ -7,7 +7,7 @@ interface Properties {
     label: string;
 }
 
-const MenuItemLink = ({ href, label }: Properties): JSX.Element => {
+const SubMenuItemLink = ({ href, label }: Properties): JSX.Element => {
     const pathname = usePathname();
 
     const isActive = (href: string) => pathname === href;
@@ -17,7 +17,7 @@ const MenuItemLink = ({ href, label }: Properties): JSX.Element => {
             href={href}
             className={
                 isActive(href)
-                    ? "block p-4 border-y-16 text-xl text-color7 scale-125"
+                    ? "block p-4 border-y-16 text-xl text-color7 font-extrbold"
                     : "block p-4 border-y-16 text-xl no-underline"
             }
         >
@@ -26,4 +26,4 @@ const MenuItemLink = ({ href, label }: Properties): JSX.Element => {
     );
 }
 
-export default MenuItemLink;
+export default SubMenuItemLink;

@@ -1,17 +1,15 @@
 import React, { JSX, useState } from "react";
 
 interface Properties {
-    onClicked?: () => void;
     children: JSX.Element | JSX.Element[];
     menuItemName: string;
 }
 
-const MenuItemWithSubMenu = ({onClicked, children, menuItemName}: Properties): JSX.Element => {
+const MenuItemWithSubMenu = ({ children, menuItemName }: Properties): JSX.Element => {
     const [submenuVisible, setSubmenuVisible] = useState(false);
 
     const handleMenuItemClicked = () => {
         setSubmenuVisible(!submenuVisible);
-        onClicked;
     }
 
     const handleSubMenuClicked = () => {
@@ -24,9 +22,7 @@ const MenuItemWithSubMenu = ({onClicked, children, menuItemName}: Properties): J
             tabIndex={0}
 
             onBlur={(e) => {
-                if (
-                    !e.currentTarget.contains(e.relatedTarget as Node)
-                ) {
+                if (!e.currentTarget.contains(e.relatedTarget as Node)) {
                     setSubmenuVisible(false);
                 }
             }}
