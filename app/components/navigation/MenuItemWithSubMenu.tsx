@@ -39,7 +39,7 @@ const MenuItemWithSubMenu = ({ children, menuItemName }: Properties): JSX.Elemen
                         ? "flex flex-col justify-start items-start absolute pl-2 pr-2 bg-color1-transparent w-52"
                         : "hidden"
                 }
-                style={{ top: "53px" }}
+                style={{ top: "55px" }}
                 onClick={handleSubMenuClicked}
             >
                 {children}

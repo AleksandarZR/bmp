@@ -20,8 +20,6 @@ const DropDownMenu = ({ session }: { session: Session }) => {
 
     useClickOutside(dropdownRef, () => {
         setDropDownVisible(false);
-        setSubmenuParallaxVisible(false);
-        setSubmenuComponentsVisible(false);
     });
 
     const isActive = (href: string) => pathname === `${href}`;

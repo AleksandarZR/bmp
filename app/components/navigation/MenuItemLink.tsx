@@ -17,8 +17,8 @@ const MenuItemLink = ({ href, label }: Properties): JSX.Element => {
             href={href}
             className={
                 isActive(href)
-                    ? "block p-4 border-y-16 text-xl text-color7 scale-125"
-                    : "block p-4 border-y-16 text-xl no-underline"
+                    ? "block p-2 border-y-16 text-xl text-color7 scale-125"
+                    : "block p-2 border-y-16 text-xl no-underline"
             }
         >
             {label}
