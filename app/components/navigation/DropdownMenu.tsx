@@ -47,8 +47,8 @@ const DropDownMenu = ({ session }: { session: Session }) => {
             href={`${href}`}
             className={
                 isActive(href)
-                    ? "pt-1 pb-1 font-extrabold text-button-background-color"
-                    : "pt-1 pb-1 decoration-0 font-xl text-text-color-blue"
+                    ? "pt-1 pb-1 font-extrabold text-color0"
+                    : "pt-1 pb-1 decoration-0 font-xl text-color0"
             }
             onClick={handleLinkClick}
         >
@@ -116,19 +116,14 @@ const DropDownMenu = ({ session }: { session: Session }) => {
                     </div>
 
 
-                    {renderLink("/settings", "Settings")}
+                    {renderLink("/pages/settings", "Settings")}
                     <div className="p-2">
                         {!session && (
                             <Arrow/>
                         )}
                         {session && <LogoutButtonArrow />}
                     </div>
-                    <div className="pb-2">
-                        
-                    </div>
                 </div>
-
-                
             </div>
         </div>
     );

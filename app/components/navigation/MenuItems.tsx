@@ -9,7 +9,7 @@ const MenuItems = () => {
     const pathname = usePathname();
     const router = useRouter();
 
-    const isActive = (href: string) => pathname === `/${href}`;
+    const isActive = (href: string) => pathname === `${href}`;
 
     const handleComponentsClicked = () =>
         setSubmenuComponentsVisible((prev) => !prev);
@@ -28,8 +28,8 @@ const MenuItems = () => {
             onClick={handleLinkClick}
             className={
                 isActive(href)
-                    ? "block pl-3 pr-3 pb-0.5 pt-0 border-y-16 text-button-background-color font-extrabold scale-125"
-                    : "block pl-3 pr-3 pb-0 pt-0 border-y-16 no-underline text-text-color-blue font-3xl"
+                    ? "block p-4 border-y-16 font-extrabold text-xl"
+                    : "block p-4 border-y-16 no-underline text-xl"
             }
         >
             {label}
@@ -41,7 +41,7 @@ const MenuItems = () => {
             <div className="flex flex-row justify-center items-center space-x-4 text-nowrap">
                 {/* Container for menu item with submenu items */}
                 <div
-                    className="relative pl-3 pr-3 pb-0 pt-0 border-y-16 cursor-pointer no-underline text-text-color-blue"
+                    className="relative pl-3 pr-3 pb-0 pt-0 border-y-16 cursor-pointer no-underline"
                     tabIndex={0}
 
                     onBlur={(e) => {
@@ -53,7 +53,7 @@ const MenuItems = () => {
                     }}
                 >
                     {/* Menu Item */}
-                    <div onClick={handleComponentsClicked} className="font-3xl">
+                    <div onClick={handleComponentsClicked} className="text-xl">
                         Components
                     </div>
 
@@ -61,7 +61,7 @@ const MenuItems = () => {
                     <div
                         className={
                             submenuComponentsVisible
-                                ? "flex flex-col absolute pl-2 pr-2 bg-color1-transparent w-36"
+                                ? "flex flex-col justify-start items-start absolute pl-2 pr-2 bg-color1-transparent w-52"
                                 : "hidden"
                         }
                         style={{ top: "53px" }}
@@ -86,7 +86,7 @@ const MenuItems = () => {
                     }}
                 >
                     {/* Menu Item */}
-                    <div onClick={handleParallaxClicked}>
+                    <div onClick={handleParallaxClicked} className="text-xl">
                         Parallax
                     </div>
 
@@ -94,7 +94,7 @@ const MenuItems = () => {
                     <div
                         className={
                             submenuParallaxVisible
-                                ? "flex flex-col absolute pl-2 pr-2 bg-color1-transparent w-36"
+                                ? "flex flex-col absolute pl-2 pr-2 bg-color1-transparent w-56"
                                 : "hidden"
                         }
                         style={{ top: "53px" }}
