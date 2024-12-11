@@ -1,13 +1,24 @@
 import React, { JSX, useState } from "react";
+import { usePathname } from "next/navigation";
 
 interface Properties {
     children: JSX.Element | JSX.Element[];
     menuItemName: string;
     customStyle?: string;
+    relatedPaths?: string[];
 }
 
-const MenuItemWithSubMenu = ({ children, menuItemName, customStyle="" }: Properties): JSX.Element => {
+const MenuItemWithSubMenu = ({ children, menuItemName, customStyle="", relatedPaths=[""] }: Properties): JSX.Element => {
     const [submenuVisible, setSubmenuVisible] = useState(false);
+    const pathname = usePathname();
+
+    const isActive = () => {
+        if (relatedPaths.includes(pathname)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     const handleMenuItemClicked = () => {
         setSubmenuVisible(!submenuVisible);
@@ -29,7 +40,8 @@ const MenuItemWithSubMenu = ({ children, menuItemName, customStyle="" }: Propert
             }}
         >
             {/* Menu Item */}
-            <div onClick={handleMenuItemClicked} className="text-xl">
+            <div onClick={handleMenuItemClicked} 
+                className={isActive() ? "text-xl text-color7 scale-125" : "text-xl"}>
                 {menuItemName}
             </div>
 

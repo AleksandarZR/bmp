@@ -6,12 +6,12 @@ import SubMenuItemLink from "./SubMenuItemLink";
 const MenuItems = (): JSX.Element => {
     return (
         <div className="w-full flex flex-row justify-center items-center space-x-4 text-nowrap">
-            <MenuItemWithSubMenu menuItemName="Components">
+            <MenuItemWithSubMenu menuItemName="Components" relatedPaths={["/pages/components1", "/pages/components2"]}>
                 <SubMenuItemLink href="/pages/components1" label="Components 1" />
                 <SubMenuItemLink href="/pages/components2" label="Components 2" />
             </MenuItemWithSubMenu>
 
-            <MenuItemWithSubMenu menuItemName="Parallax">
+            <MenuItemWithSubMenu menuItemName="Parallax" relatedPaths={["/pages/parallax1", "/pages/parallax2"]}>
                 <SubMenuItemLink href={"/pages/parallax1"} label={"Parallax effect 1"} />
                 <SubMenuItemLink href={"/pages/parallax2"} label={"Parallax effect 2"} />
             </MenuItemWithSubMenu>

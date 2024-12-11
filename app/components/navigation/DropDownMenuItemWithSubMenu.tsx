@@ -1,4 +1,5 @@
 import React, { JSX, useState } from "react";
+import { usePathname } from "next/navigation";
 
 interface Properties {
     children: JSX.Element | JSX.Element[];
@@ -6,10 +7,20 @@ interface Properties {
     customStyle?: string;
     //subMenuItemClicked?: () => void;
     subMenuItemClicked?: any;
+    relatedPaths?: string[];
 }
 
-const DropDownMenuItemWithSubMenu = ({ children, menuItemName, customStyle="", subMenuItemClicked }: Properties): JSX.Element => {
+const DropDownMenuItemWithSubMenu = ({ children, menuItemName, customStyle="", subMenuItemClicked, relatedPaths=[""] }: Properties): JSX.Element => {
     const [submenuVisible, setSubmenuVisible] = useState(false);
+    const pathname = usePathname();
+
+    const isActive = () => {
+        if (relatedPaths.includes(pathname)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     const handleMenuItemClicked = () => {
         setSubmenuVisible(!submenuVisible);
@@ -35,7 +46,8 @@ const DropDownMenuItemWithSubMenu = ({ children, menuItemName, customStyle="", s
             }}
         >
             {/* Menu Item */}
-            <div onClick={handleMenuItemClicked} className="p-2 text-xl">
+            <div onClick={handleMenuItemClicked} 
+                className={isActive() ? "p-2 text-xl text-color7 scale-125" : "p-2 text-xl"}>
                 {menuItemName}
             </div>
 
