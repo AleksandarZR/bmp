@@ -37,7 +37,7 @@ const MenuItemWithSubMenu = ({ children, menuItemName, customStyle="" }: Propert
             <div
                 className={
                     submenuVisible
-                        ? `flex flex-col justify-start items-start absolute pl-2 pr-2 bg-color1-transparent w-52 top-[55px] ${customStyle}`
+                        ? `flex flex-col justify-start items-start absolute pl-2 pr-2 bg-color1-transparent top-[55px] whitespace-nowrap ${customStyle}`
                         : "hidden"
                 }
                 onClick={handleSubMenuClicked}

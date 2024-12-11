@@ -17,7 +17,7 @@ const DropDownMenuItemWithSubMenu = ({ children, menuItemName, customStyle="", s
 
     const handleSubMenuClicked = () => {
         setSubmenuVisible(!submenuVisible);
-        
+
         if (subMenuItemClicked) {
             subMenuItemClicked();
         }
@@ -35,7 +35,7 @@ const DropDownMenuItemWithSubMenu = ({ children, menuItemName, customStyle="", s
             }}
         >
             {/* Menu Item */}
-            <div onClick={handleMenuItemClicked} className="text-xl">
+            <div onClick={handleMenuItemClicked} className="p-2 text-xl">
                 {menuItemName}
             </div>
 
@@ -43,7 +43,7 @@ const DropDownMenuItemWithSubMenu = ({ children, menuItemName, customStyle="", s
             <div
                 className={
                     submenuVisible
-                        ? `flex flex-col justify-start items-start absolute pl-2 pr-2 bg-color1-transparent w-52 ${customStyle}`
+                        ? `flex flex-col justify-start items-start absolute pl-2 pr-2 bg-color1-transparent whitespace-nowrap w-fit ${customStyle}`
                         : "hidden"
                 }
                 onClick={handleSubMenuClicked}

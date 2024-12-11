@@ -17,8 +17,8 @@ const SubMenuItemLink = ({ href, label }: Properties): JSX.Element => {
             href={href}
             className={
                 isActive(href)
-                    ? "block p-4 border-y-16 text-xl text-color7 font-extrbold"
-                    : "block p-4 border-y-16 text-xl no-underline"
+                    ? "block p-2 border-y-16 text-xl text-color7 font-extrbold"
+                    : "block p-2 border-y-16 text-xl no-underline"
             }
         >
             {label}

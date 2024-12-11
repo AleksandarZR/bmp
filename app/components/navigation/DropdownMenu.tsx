@@ -39,18 +39,18 @@ const DropDownMenu = ({ session }: { session: Session }) => {
             <div
                 className={
                     dropDownVisible
-                        ? "lg:hidden sm:flex flex-col justify-start fixed left-0 bg-color1-transparent w-60 pt-4 pb-5 top-20 font-3xl"
+                        ? "lg:hidden sm:flex flex-col justify-start fixed left-0 bg-color1-transparent w-48 pt-4 pb-5 top-20 font-3xl"
                         : "hidden"
                 }
                 style={{ fontSize: "1.5rem" }}
             >
                 <div className="flex flex-col justify-center items-center w-full">
-                    <DropDownMenuItemWithSubMenu menuItemName="Components" subMenuItemClicked={subMenuItemClickedHandler} customStyle="top-[-16px] left-[190px]">
+                    <DropDownMenuItemWithSubMenu menuItemName="Components" subMenuItemClicked={subMenuItemClickedHandler} customStyle="top-[-16px] left-[174px]">
                         <SubMenuItemLink href="/pages/components1" label="Components 1" />
                         <SubMenuItemLink href="/pages/components2" label="Components 2" />
                     </DropDownMenuItemWithSubMenu>
 
-                    <DropDownMenuItemWithSubMenu menuItemName="Parallax" subMenuItemClicked={subMenuItemClickedHandler} customStyle="top-[-10px] left-[169px]">
+                    <DropDownMenuItemWithSubMenu menuItemName="Parallax" subMenuItemClicked={subMenuItemClickedHandler} customStyle="top-[-2px] left-[154px]">
                         <SubMenuItemLink href={"/pages/parallax1"} label={"Parallax effect 1"} />
                         <SubMenuItemLink href={"/pages/parallax2"} label={"Parallax effect 2"} />
                     </DropDownMenuItemWithSubMenu>
