@@ -4,9 +4,11 @@ interface Properties {
     children: JSX.Element | JSX.Element[];
     menuItemName: string;
     customStyle?: string;
+    //subMenuItemClicked?: () => void;
+    subMenuItemClicked?: any;
 }
 
-const MenuItemWithSubMenu = ({ children, menuItemName, customStyle="" }: Properties): JSX.Element => {
+const DropDownMenuItemWithSubMenu = ({ children, menuItemName, customStyle="", subMenuItemClicked }: Properties): JSX.Element => {
     const [submenuVisible, setSubmenuVisible] = useState(false);
 
     const handleMenuItemClicked = () => {
@@ -15,6 +17,10 @@ const MenuItemWithSubMenu = ({ children, menuItemName, customStyle="" }: Propert
 
     const handleSubMenuClicked = () => {
         setSubmenuVisible(!submenuVisible);
+        
+        if (subMenuItemClicked) {
+            subMenuItemClicked();
+        }
     }
 
     return (
@@ -37,7 +43,7 @@ const MenuItemWithSubMenu = ({ children, menuItemName, customStyle="" }: Propert
             <div
                 className={
                     submenuVisible
-                        ? `flex flex-col justify-start items-start absolute pl-2 pr-2 bg-color1-transparent w-52 top-[55px] ${customStyle}`
+                        ? `flex flex-col justify-start items-start absolute pl-2 pr-2 bg-color1-transparent w-52 ${customStyle}`
                         : "hidden"
                 }
                 onClick={handleSubMenuClicked}
@@ -48,4 +54,4 @@ const MenuItemWithSubMenu = ({ children, menuItemName, customStyle="" }: Propert
     );
 }
 
-export default MenuItemWithSubMenu;
+export default DropDownMenuItemWithSubMenu;

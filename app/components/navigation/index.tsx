@@ -18,7 +18,7 @@ const Navigation = ({ session }: any) => {
                     <LogoDesktop session={session} />
                 </div>
 
-                <MenuItems session={session} />
+                <MenuItems/>
 
                 {session && (
                     <div className=" min-w-[42px]">
