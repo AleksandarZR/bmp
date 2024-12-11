@@ -21,6 +21,10 @@ const DropDownMenu = ({ session }: { session: Session }) => {
         setDropDownVisible(false);
     }
 
+    const menuItemClickedHandler = () => {
+        setDropDownVisible(false);
+    }
+
     return (
         <div ref={dropdownRef}>
             {/* Hamburger icon */}
@@ -45,18 +49,28 @@ const DropDownMenu = ({ session }: { session: Session }) => {
                 style={{ fontSize: "1.5rem" }}
             >
                 <div className="flex flex-col justify-center items-center w-full">
-                    <DropDownMenuItemWithSubMenu menuItemName="Components" subMenuItemClicked={subMenuItemClickedHandler} customStyle="top-[-16px] left-[174px]" relatedPaths={["/pages/components1", "/pages/components2"]}>
+                    <DropDownMenuItemWithSubMenu
+                        menuItemName="Components"
+                        subMenuItemClicked={subMenuItemClickedHandler}
+                        customStyle="top-[-16px] left-[174px]"
+                        relatedPaths={["/pages/components1", "/pages/components2"]}
+                    >
                         <SubMenuItemLink href="/pages/components1" label="Components 1" />
                         <SubMenuItemLink href="/pages/components2" label="Components 2" />
                     </DropDownMenuItemWithSubMenu>
 
-                    <DropDownMenuItemWithSubMenu menuItemName="Parallax" subMenuItemClicked={subMenuItemClickedHandler} customStyle="top-[-2px] left-[154px]" relatedPaths={["/pages/parallax1", "/pages/parallax2"]}>
+                    <DropDownMenuItemWithSubMenu
+                        menuItemName="Parallax"
+                        subMenuItemClicked={subMenuItemClickedHandler}
+                        customStyle="top-[-2px] left-[154px]"
+                        relatedPaths={["/pages/parallax1", "/pages/parallax2"]}
+                    >
                         <SubMenuItemLink href={"/pages/parallax1"} label={"Parallax effect 1"} />
                         <SubMenuItemLink href={"/pages/parallax2"} label={"Parallax effect 2"} />
                     </DropDownMenuItemWithSubMenu>
 
-                    <MenuItemLink href={"/pages/settings"} label={"Settings"} />
-                    
+                    <MenuItemLink href={"/pages/settings"} label={"Settings"} onClickHandler={menuItemClickedHandler} />
+
                     <div className="p-2">
                         {!session && (
                             <Arrow />

@@ -47,7 +47,7 @@ const DropDownMenuItemWithSubMenu = ({ children, menuItemName, customStyle="", s
         >
             {/* Menu Item */}
             <div onClick={handleMenuItemClicked} 
-                className={isActive() ? "p-2 text-xl text-color7 scale-125" : "p-2 text-xl"}>
+                className={isActive() ? "p-2 text-xl text-color7" : "p-2 text-xl"}>
                 {menuItemName}
             </div>
 

@@ -41,7 +41,7 @@ const MenuItemWithSubMenu = ({ children, menuItemName, customStyle="", relatedPa
         >
             {/* Menu Item */}
             <div onClick={handleMenuItemClicked} 
-                className={isActive() ? "text-xl text-color7 scale-125" : "text-xl"}>
+                className={isActive() ? "text-xl text-color7": "text-xl"}>
                 {menuItemName}
             </div>
 
