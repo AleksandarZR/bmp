@@ -21,7 +21,7 @@ export default function Parallax2() {
 
                         <div className="w-[90%] h-auto self-center overflow-x-hidden overflow-y-hidden flex flex-col justify-start items-center text-[2rem]" id="info">
 
-                            <p className="px-0 py-[3rem] max-w-[90%] text-justify text-center overflow-x-hidden" id="text1">
+                            <p className="px-space8 py-[3rem] max-w-full text-justify text-center overflow-x-hidden" id="text1">
                                 Venom is a character appearing in American comic books published by
                                 Marvel
                                 Comics. The character is a sentient alien symbiote with an amorphous, liquid-like form, who
@@ -35,7 +35,7 @@ export default function Parallax2() {
                                 1988).
                             </p>
 
-                            <p className="px-0 py-[3rem] max-w-[90%] text-justify text-center overflow-x-hidden" id="text2">
+                            <p className="px-space8 py-[3rem] max-w-full text-justify text-center overflow-x-hidden" id="text2">
                                 The Venom symbiote's first human host was Spider-Man himself, who
                                 eventually
                                 discovered its true nefarious nature and separated himself from the creature in The Amazing
@@ -47,7 +47,7 @@ export default function Parallax2() {
                                 with whom it first became Venom
                             </p>
 
-                            <p className="px-0 py-[3rem] max-w-[90%] text-justify text-center overflow-x-hidden" id="text3">
+                            <p className="px-space8 py-[3rem] max-w-full text-justify text-center overflow-x-hidden" id="text3">
                                 A fan-favorite character and well-known figure in popular culture,
                                 Venom
                                 (primarily the Eddie Brock incarnation) is the most recognizable Spider-Man antagonist not
@@ -105,7 +105,7 @@ export default function Parallax2() {
                     className="bg-top-center bg-cover bg-no-repeat bg-[url('/images/spaceLayer99.jpg')] bg-fixed absolute top-0 right-0 bottom-0 left-0" >
                 </div>
 
-                <div className="h-[200vh]" id="buffer">
+                <div className="h-[200vh] md:h-[300vh] sm:h-[350vh]" id="buffer">
 
                 </div>
             </div>
