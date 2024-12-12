@@ -63,10 +63,11 @@ const DropDownMenu = ({ session }: { session: Session }) => {
                         menuItemName="Parallax"
                         subMenuItemClicked={subMenuItemClickedHandler}
                         customStyle="top-[-2px] left-[154px]"
-                        relatedPaths={["/pages/parallax1", "/pages/parallax2"]}
+                        relatedPaths={["/pages/parallax1", "/pages/parallax2", "/pages/parallax3"]}
                     >
                         <SubMenuItemLink href={"/pages/parallax1"} label={"Parallax effect 1"} />
                         <SubMenuItemLink href={"/pages/parallax2"} label={"Parallax effect 2"} />
+                        <SubMenuItemLink href={"/pages/parallax3"} label={"Parallax effect 3"} />
                     </DropDownMenuItemWithSubMenu>
 
                     <MenuItemLink href={"/pages/settings"} label={"Settings"} onClickHandler={menuItemClickedHandler} />

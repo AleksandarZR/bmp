@@ -33,6 +33,8 @@ const config: Config =  {
                 "color9-transparent": "var(--color9-transparent)",
                 "color10": "var(--color10)",
                 "color10-transparent": "var(--color10-transparent)",
+                "color11": "var(--color11)",
+                "color12": "var(--color12)",
             },
             spacing: {
                 space1: "8px",
@@ -65,6 +67,8 @@ const config: Config =  {
             mono: ["ui-monospace", "SFMono-Regular"],
         },
     },
-    plugins: [], 
+    plugins: [
+        require("@xpd/tailwind-3dtransforms"),
+    ], 
 };
 export default config;

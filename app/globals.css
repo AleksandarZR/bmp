@@ -24,6 +24,7 @@
     --color9: rgba(55, 195, 236, 1);
     --color10: rgb(43, 76, 93);
     --color11: rgb(43, 76, 93);
+    --color12: rgb(29, 31, 30);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,6 +37,7 @@
 body {
     color: var(--foreground);
     background: var(--background);
+    background: var(--color2-transparent);
     font-family: Arial, Helvetica, sans-serif;
 
     width: 100%;

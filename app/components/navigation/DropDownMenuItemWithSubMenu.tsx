@@ -5,8 +5,8 @@ interface Properties {
     children: JSX.Element | JSX.Element[];
     menuItemName: string;
     customStyle?: string;
-    //subMenuItemClicked?: () => void;
-    subMenuItemClicked?: any;
+    subMenuItemClicked?: () => void;
+    //subMenuItemClicked?: any;
     relatedPaths?: string[];
 }
 
