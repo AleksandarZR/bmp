@@ -80,7 +80,7 @@ export default function Parallax2() {
                     id="layer-3"
                     className="bg-right bg-auto bg-no-repeat bg-[url('/images/spaceLayer03.png')] absolute top-0 right-[100px] bottom-0 left-0"
                     style={{
-                        transform: "translate3d(0, -5px, .25px) scale(.8)",
+                        transform: "translate3d(0, -5px, .18px) scale(.8)",
                     }}>
                 </div>
 
@@ -102,7 +102,63 @@ export default function Parallax2() {
 
                 <div
                     id="layer-99"
-                    className="bg-top-center bg-cover bg-no-repeat bg-[url('/images/spaceLayer99.jpg')] bg-fixed absolute top-0 right-0 bottom-0 left-0" >
+                    className="bg-top-center bg-cover bg-no-repeat bg-[url('/images/spaceLayer99.jpg')] bg-fixed absolute top-0 right-0 bottom-0 left-0"
+                >
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[100px] left-[180px]" id="star1">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[100px] left-[180px]" id="star1">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[100px] left-[180px]" id="star1">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[100px] left-[180px]" id="star1">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[100px] left-[180px]" id="star1">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[100px] left-[180px]" id="star1">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[100px] left-[180px]" id="star1">﹡</div>
+
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[150px] left-[800px]" id="star2">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[150px] left-[800px]" id="star2">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[150px] left-[800px]" id="star2">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[150px] left-[800px]" id="star2">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[150px] left-[800px]" id="star2">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[150px] left-[800px]" id="star2">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[150px] left-[800px]" id="star2">﹡</div>
+
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[350px] left-[200px]" id="star3">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[350px] left-[200px]" id="star3">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[350px] left-[200px]" id="star3">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[350px] left-[200px]" id="star3">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[350px] left-[200px]" id="star3">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[350px] left-[200px]" id="star3">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[350px] left-[200px]" id="star3">﹡</div>
+
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[250px] left-[700px]" id="star4">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[250px] left-[700px]" id="star4">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[250px] left-[700px]" id="star4">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[250px] left-[700px]" id="star4">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[250px] left-[700px]" id="star4">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[250px] left-[700px]" id="star4">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[250px] left-[700px]" id="star4">﹡</div>
+
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[400px] right-[300px]" id="star5">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[400px] right-[300px]" id="star5">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[400px] right-[300px]" id="star5">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[400px] right-[300px]" id="star5">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[400px] right-[300px]" id="star5">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[400px] right-[300px]" id="star5">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[400px] right-[300px]" id="star5">﹡</div>
+
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[250px] left-[500px]" id="star6">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[250px] left-[500px]" id="star6">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[250px] left-[500px]" id="star6">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[250px] left-[500px]" id="star6">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[250px] left-[500px]" id="star6">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[250px] left-[500px]" id="star6">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[250px] left-[500px]" id="star6">﹡</div>
+
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[500px] right-[450px]" id="star7">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[500px] right-[450px]" id="star7">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[500px] right-[450px]" id="star7">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[500px] right-[450px]" id="star7">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[500px] right-[450px]" id="star7">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[500px] right-[450px]" id="star7">﹡</div>
+                    <div className="absolute animate-pulseStar origin-center text-[1.5rem] text-color0 top-[500px] right-[450px]" id="star7">﹡</div>
                 </div>
 
                 <div className="h-[200vh] md:h-[300vh] sm:h-[350vh]" id="buffer">

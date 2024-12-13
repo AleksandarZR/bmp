@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-const config: Config =  {
+const config: Config = {
     content: [
         "./pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -58,6 +58,31 @@ const config: Config =  {
                 space24: "32px",
                 space25: "40px",
             },
+            animation: {
+                pulseStar: "pulseStar 5s linear infinite both"
+            },
+            keyframes: {
+                pulseStar: {
+                    "0%": {
+                        textShadow: "rgb(255, 255, 255) 0px 0px 0px",
+                        transform: "scale(0.2)",
+                    },
+                    "25%": {
+                        textShadow: "rgb(255, 255, 255) 0px 0px 25px",
+                    },
+                    "50%": {
+                        textShadow: "rgb(255, 255, 255) 1px 1px 50px",
+                        transform: "scale(2.7)",
+                    },
+                    "75%": {
+                        textShadow: "rgb(255, 255, 255) 0px 0px 25px",
+                    },
+                    "100%": {
+                        textShadow: "rgb(255, 255, 255) 0px 0px 0px",
+                        transform: "scale(0.2)",
+                    },
+                }
+            }
         },
         screens: {
             sm: { min: "100px", max: "600.01px" },
@@ -72,6 +97,6 @@ const config: Config =  {
     },
     plugins: [
         require("@xpd/tailwind-3dtransforms"),
-    ], 
+    ],
 };
 export default config;
