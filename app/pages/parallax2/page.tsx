@@ -80,7 +80,7 @@ export default function Parallax2() {
                     id="layer-3"
                     className="bg-right bg-auto bg-no-repeat bg-[url('/images/spaceLayer03.png')] absolute top-0 right-[100px] bottom-0 left-0"
                     style={{
-                        transform: "translate3d(0, -5px, .18px) scale(.8)",
+                        transform: "translate3d(0, 70px, .18px) scale(.8)",
                     }}>
                 </div>
 
