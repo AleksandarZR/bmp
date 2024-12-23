@@ -7,51 +7,13 @@ import { useRef } from "react";
 
 
 export default function Parallax3() {
-    const [thorPosition, setThorPosition] = useState(0);
     const { scrollYProgress, scrollY } = useScroll();
     
-    const y = useTransform(scrollY, (value: any) => -2*value)
+    const y = useTransform(scrollY, (value: any) => -5*value)
     const scaleThor = useTransform(scrollYProgress, (value: any) => 1+5*value)
 
-    function onResize() {
-        console.log("onResize called");
-        document.body.style.setProperty("--scroll", (window.pageYOffset / (document.body.offsetHeight - window.innerHeight)).toString());
-    }
-
-    function onScroll() {
-        console.log("ON SCROLL CALLED");
-        document.body.style.setProperty("--scroll", (window.pageYOffset / (document.body.offsetHeight - window.innerHeight)).toString());
-        let position = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
-        setThorPosition(position);
-    }
-
-    useEffect(() => {
-        // Add eventlistener to window
-        window.addEventListener('scroll', onScroll); //, { passive: true }
-        window.addEventListener('resize', onResize);
-
-        // Remove event on unmount to prevent a memory leak with the cleanup
-        // return () => {
-        //     window.removeEventListener("scroll", onScroll);
-        // }
-    }, []);
-
-    //id="page" classNamr="overflow-x-hidden... "
     return (
         <div id="page" className="w-full h-full  bg-color0-transparent text-color1">
-
-            {/* <Image src="/images/thor2.png"
-                alt="Thor"
-                width={0}
-                height={0}
-                className={styles.thor}
-                sizes="100vw"
-                style={{ width: "75%", height: "auto" }}
-            /> */}
-            {/* "fixed top-[25%] left-[10%] animate-scaleAndTranslate z-80" */}
-
-            {/* <img className={styles.thor} src="/images/thor2.png"/> */}
-
             <motion.div
                 className={styles.imageContainer}
                 initial={{ opacity: 1 }}
@@ -73,10 +35,6 @@ export default function Parallax3() {
             <div id="headlineContainer" className="h-[30vh] flex flex-col justify-center items-center bg-color1">
                 <h1 id="headline animationTomahawk" className="px-[1rem] text-color0 text-center text-[10vw] font-serif font-extrabold overflow-hidden overflow-y-hidden drop-shadow-[3px_3px_10px_rgb(255,0,0)]">Thor</h1>
             </div>
-
-            <h1 className={styles.test}>
-                AAA
-            </h1>
 
             <div id="overflow" className="pb-[20rem] w-full max-w-full bg-color1 text-color0 overflow-x-hidden text-center">
                 <p id="text1 hidden" className="mt-[0rem] mb-[5rem] px-[10vw] py-0 leading-10 text-justify text-2xl" >Thor Odinson is a superhero appearing in American comic books published by Marvel Comics.
