@@ -1,36 +1,17 @@
 'use client'
 import styles from './page.module.css';
-
 import Image from 'next/image';
 import { useCallback, useEffect, useState } from 'react';
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
-/**
- * Prisluskuje dogadjaj "scroll" i dodeljuje vrednost globalnoj varijabli "--scroll"
- * 
- * The pageYOffset property returns the pixels a document has scrolled from the upper left corner of the window.
- * The pageYOffset property is equal to the scrollY property.
- * 
- * The HTMLElement.offsetHeight read-only property returns the height of an element, including vertical padding and borders, as an integer.
- * 
- * The innerHeight property returns the height of a window's content area.
- */
-/*window.addEventListener(
-    "scroll",
-    () => {
-        document.body.style.setProperty(
-            "--scroll",
-            (window.pageYOffset / (document.body.offsetHeight - window.innerHeight)).toString()
-        );
-    },
-    false
-);*/
 
 export default function Parallax3() {
     const [thorPosition, setThorPosition] = useState(0);
-    // const onScroll = () => {
-    //     console.log("onScroll called");
-    //     document.body.style.setProperty("--scroll", (window.pageYOffset / (document.body.offsetHeight - window.innerHeight)).toString());
-    // }
+    const { scrollYProgress, scrollY } = useScroll();
+    
+    const y = useTransform(scrollY, (value: any) => -2*value)
+    const scaleThor = useTransform(scrollYProgress, (value: any) => 1+5*value)
 
     function onResize() {
         console.log("onResize called");
@@ -69,8 +50,19 @@ export default function Parallax3() {
             /> */}
             {/* "fixed top-[25%] left-[10%] animate-scaleAndTranslate z-80" */}
 
-            <img className={styles.thor} src="/images/thor2.png"/>
-            
+            {/* <img className={styles.thor} src="/images/thor2.png"/> */}
+
+            <motion.div
+                className={styles.imageContainer}
+                initial={{ opacity: 1 }}
+                whileinView={{ opacity: 1 }}
+                // animate={{ scale: 3 }}
+                transition={{ duration: 1, delay: 0, ease: "easeOut" }}
+                style={{ translateY: y, scale: scaleThor }}
+
+            >
+                <img className={styles.image} src="/images/thor2.png" />
+            </motion.div>
 
             <video id="Video" className="w-full h-[70vh] object-cover"
                 src="/videos/thunder3.mp4"
@@ -83,7 +75,7 @@ export default function Parallax3() {
             </div>
 
             <h1 className={styles.test}>
-                AAAAA
+                AAA
             </h1>
 
             <div id="overflow" className="pb-[20rem] w-full max-w-full bg-color1 text-color0 overflow-x-hidden text-center">
