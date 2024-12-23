@@ -4,8 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Parallax3() {
     const { scrollYProgress, scrollY } = useScroll();
-    
-    const y = useTransform(scrollY, (value: any) => -5*value)
+    const y = useTransform(scrollY, (value: any) => -3.5*value)
     const scaleThor = useTransform(scrollYProgress, (value: any) => 1+5*value)
 
     return (
