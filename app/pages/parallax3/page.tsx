@@ -1,10 +1,6 @@
 'use client'
 import styles from './page.module.css';
-import Image from 'next/image';
-import { useCallback, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
-
 
 export default function Parallax3() {
     const { scrollYProgress, scrollY } = useScroll();
@@ -16,17 +12,12 @@ export default function Parallax3() {
         <div id="page" className="w-full h-full  bg-color0-transparent text-color1">
             <motion.div
                 className={styles.imageContainer}
-                initial={{ opacity: 1 }}
-                whileinView={{ opacity: 1 }}
-                // animate={{ scale: 3 }}
-                transition={{ duration: 1, delay: 0, ease: "easeOut" }}
                 style={{ translateY: y, scale: scaleThor }}
-
             >
                 <img className={styles.image} src="/images/thor2.png" />
             </motion.div>
 
-            <video id="Video" className="w-full h-[70vh] object-cover"
+            <video id="video" className="w-full h-[70vh] object-cover"
                 src="/videos/thunder3.mp4"
                 autoPlay
                 muted loop>
