@@ -1,0 +1,29 @@
+.test {
+    font-weight: 700;
+    font-size: 50rem;
+}
+
+.thor {
+    width: 75%;
+    height: auto;
+    position: fixed;
+    top: 25%;
+    left: 10%;
+    z-index: 800;
+    /* transform: translate(-50%, -50%); */
+
+    animation-name: scaleAndTranslate;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    /* animation-iteration-count: infinite; */
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * (-1s));
+    /* animation-fill-mode: both; */
+}
+
+@keyframes scaleAndTranslate {
+    to {
+        transform: scale(3) translateY(-1500px);
+    }
+}

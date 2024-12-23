@@ -59,8 +59,9 @@ const config: Config = {
                 space25: "40px",
             },
             animation: {
-                pulseStar: "pulseStar 5s linear infinite both"
-            },
+                pulseStar: "pulseStar 5s linear infinite both",
+                scaleAndTranslate: "scaleAndTranslate 2s 1 linear" 
+            }, //paused both   calc(var(--scroll)*(-1s))
             keyframes: {
                 pulseStar: {
                     "0%": {
@@ -81,8 +82,14 @@ const config: Config = {
                         textShadow: "rgb(255, 255, 255) 0px 0px 0px",
                         transform: "scale(0.2)",
                     },
+                },
+                scaleAndTranslate: {
+                    "to": {
+                        transform: "scale(3) translateY(-1500px)",
+                    }
                 }
-            }
+            },
+            
         },
         screens: {
             sm: { min: "100px", max: "600.01px" },
