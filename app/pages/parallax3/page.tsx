@@ -28,8 +28,8 @@ export default function Parallax3() {
 
             <div id="overflow" className="pb-[20rem] w-full max-w-full bg-color1 text-color0 overflow-x-hidden text-center">
                 <motion.p id="text1 hidden" className="mt-[2rem] mb-[5rem] px-[10vw] py-0 leading-10 text-justify text-2xl"
-                    initial={{ opacity: 0, x: 1000 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
                     transition={{ duration: 2, delay: 0.75, ease: "easeInOut" }}
                     viewport={{ once: false }}
                 >
@@ -42,8 +42,8 @@ export default function Parallax3() {
                 </motion.p>
 
                 <motion.p id="text2 hidden" className="mt-[10rem] mb-[5rem] px-[10vw] py-0 leading-10 text-justify text-2xl" 
-                    initial={{ opacity: 0, x: -1000 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
                     transition={{ duration: 2, delay: 0.75, ease: "easeInOut" }}
                 >
                     Thor is one of the gods of Asgard and the son of the Asgardian king Odin. In addition to
@@ -55,8 +55,8 @@ export default function Parallax3() {
                 </motion.p>
 
                 <motion.p id="text2 hidden" className="mt-[10rem] mb-[5rem] px-[10vw] py-0 leading-10 text-justify text-2xl"
-                    initial={{ opacity: 0, x: 1000 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
                     transition={{ duration: 2, delay: 0.75, ease: "easeInOut" }}
                 >
                     Thor's cast of supporting characters includes his fellow Asgardians Odin, Sif, The Warriors
@@ -65,6 +65,20 @@ export default function Parallax3() {
                     and he has played a major role in Marvel crossover events, including Avengers Disassembled (2004), Siege
                     (2010), and "The War of the Realms" (2019). Chris Hemsworth portrays the cinematic adaptation of Thor in
                     the Marvel Cinematic Universe, first appearing in Thor (2011).
+                </motion.p>
+
+                <motion.p id="text1 hidden" className="mt-[10rem] mb-[5rem] px-[10vw] py-0 leading-10 text-justify text-2xl"
+                    initial={{ opacity: 0, x: 1000 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 2, delay: 0.75, ease: "easeInOut" }}
+                    viewport={{ once: false }}
+                >
+                    Thor Odinson is a superhero appearing in American comic books published by Marvel Comics.
+                    Created by artist Jack Kirby, writer Stan Lee, and scripter Larry Lieber, the character first appeared
+                    in Journey into Mystery #83 (1962) and first received his own title with Thor #126 (1966). Thor is an
+                    adaptation of the deity of the same name from Norse mythology, and many aspects of Thor's character are
+                    based on Norse myth. Comic books featuring Thor have been published across several volumes since the
+                    character's introduction.
                 </motion.p>
             </div>
         </div>
