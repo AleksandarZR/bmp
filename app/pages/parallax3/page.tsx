@@ -1,5 +1,4 @@
 'use client'
-import styles from './page.module.css';
 import { motion, useScroll, useTransform, inView, useInView } from "framer-motion";
 import { useState, useRef } from "react";
 
@@ -14,12 +13,12 @@ export default function Parallax3() {
     console.log("battleContainerInView", battleContainerInView);
 
     return (
-        <div id="page" className="w-full h-full  bg-color0-transparent text-color1">
+        <div id="page" className="w-full h-full bg-color0-transparent text-color1">
             <motion.div
-                className={styles.imageContainer}
+                className="fixed w-full h-full z-[1] flex flex-col justify-center items-center pointer-events-none"
                 style={{ translateY: y, scale: scaleThor }}
             >
-                <img className={styles.image} src="/images/thor2.png" />
+                <img className="fixed top-[25%] left-[10%] w-[75%] h-[auto] z-[5] pointer-events-none" src="/images/thor2.png" />
             </motion.div>
 
             <video id="video" className="w-full h-[70vh] object-cover"
