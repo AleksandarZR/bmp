@@ -76,7 +76,7 @@ export default function Parallax3() {
                 <motion.div
                     ref={battleContainerRef}
                     id="battleContainer"
-                    className="mt-space9 w-full min-h-[100px] flex flex-row justify-center items-center bg-yellow-200"
+                    className="mt-space9 w-full min-h-[100px] flex flex-row justify-center items-center"
                 >
                     <motion.div
                         className="flex flex-col justify-end items-center"
