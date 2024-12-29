@@ -51,12 +51,18 @@ const config: Config = {
                 space13: "24px",
                 space14: "32px",
                 space15: "40px",
+                space16: "48px",
+                space17: "56px",
+                space18: "64px",
 
                 space21: "8px",
                 space22: "16px",
                 space23: "24px",
                 space24: "32px",
                 space25: "40px",
+                space26: "48px",
+                space27: "56px",
+                space28: "64px",
             },
             animation: {
                 pulseStar: "pulseStar 5s linear infinite both",

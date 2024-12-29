@@ -1,30 +1,17 @@
 'use client'
 import styles from './page.module.css';
 import { motion, useScroll, useTransform, inView, useInView } from "framer-motion";
-// import { inView } from "motion"
 import { useState, useRef } from "react";
-// import { useInView } from '../../../node_modules/framer-motion/dist/index';
-const battleContainer = document.getElementById("battleContainer");
 
 export default function Parallax3() {
     const { scrollYProgress, scrollY } = useScroll();
     const y = useTransform(scrollY, (value: any) => -3.5 * value)
     const scaleThor = useTransform(scrollYProgress, (value: any) => 1 + 5 * value)
-    const [isInView, setIsInView] = useState(false);
+
     const battleContainerRef = useRef(null);
     const battleContainerInView: boolean = useInView(battleContainerRef);
 
     console.log("battleContainerInView", battleContainerInView);
-
-    inView("#battleContainer", (info: any) => {
-        console.log("Entering View!");
-        setIsInView(true);
-
-        return (leaveInfo: any) => {
-            console.log("Leaving View!");
-            setIsInView(false);
-        };
-    });
 
     return (
         <div id="page" className="w-full h-full  bg-color0-transparent text-color1">
@@ -86,86 +73,14 @@ export default function Parallax3() {
                     the Marvel Cinematic Universe, first appearing in Thor (2011).
                 </motion.p>
 
-                <motion.p id="text1 hidden" className="mt-[10rem] mb-[5rem] px-[10vw] py-0 leading-10 text-justify text-2xl"
-                    initial={{ opacity: 0, x: 1000 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 2, delay: 0.75, ease: "easeInOut" }}
-                    viewport={{ once: false }}
-                >
-                    Thor Odinson is a superhero appearing in American comic books published by Marvel Comics.
-                    Created by artist Jack Kirby, writer Stan Lee, and scripter Larry Lieber, the character first appeared
-                    in Journey into Mystery #83 (1962) and first received his own title with Thor #126 (1966). Thor is an
-                    adaptation of the deity of the same name from Norse mythology, and many aspects of Thor's character are
-                    based on Norse myth. Comic books featuring Thor have been published across several volumes since the
-                    character's introduction.
-                </motion.p>
-
                 <motion.div
                     ref={battleContainerRef}
                     id="battleContainer"
-                    className="w-full min-h-[100px] flex flex-row justify-center items center bg-white"
-                    initial={() => {
-                        console.log("NOT IN VIEW");
-                        setIsInView(isInView);
-                        setIsInView(false);
-                        //    return {}
-                    }}
-                    // whileNotInView={() => {
-                    //     setIsInView(false);
-                    //     return {}
-                    // }}
-                    whileInView={() => {
-                        console.log("IN VIEW");
-                        setIsInView(isInView);
-                        setIsInView(true);
-                        //return () => { console.log("NOT IN VEW"); }
-                    }}
-                //viewport={{ once: false }}
+                    className="w-full min-h-[100px] flex flex-row justify-center items center"
                 >
                     <motion.div
                         className="flex flex-col justify-end items-center"
-                        //initial={{ x: -1000 }}
-                        //initial={!isInView && { x: -1000 }}
-                        // whileInView={isInView && { x: 0 }}
-                        // transition={{ duration: 2, delay: 0.75, ease: "easeInOut" }}
-                        style={{ x: -1000 }}
-                        animate={
-                            isInView && {
-                                x: 0,
-                                transition: {
-                                    duration: 1,
-                                    type: "spring",
-                                    stiffness: 50
-                                }
-                            }
-                        }
-                        viewport={{ once: false }}
-                    >
-                        <img className="min-h-[500px] min-w-[535px]"
-                            src="/images/thor-attack.png"
-                        />
-                    </motion.div>
-
-                    {/* <motion.div 
-                        id="buffer"
-                        className="bg-white"
-                        initial={{ width: 5000}}
-                        whileInView={{ width: 20 }}
-                        transition={{ duration: 2, delay: 0.75, ease: "easeInOut" }}
-                    > 
-                    </motion.div> */}
-
-                    <motion.div
-                        className="flex flex-col justify-start items-center"
-                        initial={{ x: 1000 }}
-                        // style={{ 
-                        //     x: battleContainerInView ? 0 : 1000,
-                        //     transition: {
-                        //         duration: 1,
-                        //         type: "spring",
-                        //         stiffness: 50
-                        //     } 
-                        // }}
+                        initial={{ x: -1500 }}
                         animate={
                             battleContainerInView ? {
                                 x: 0,
@@ -173,10 +88,10 @@ export default function Parallax3() {
                                     duration: 1,
                                     type: "spring",
                                     stiffness: 50,
-                                    delay: 0.75
+                                    delay: 1.25
                                 }
                             } : {
-                                x: 1000,
+                                x: -1500,
                                 transition: {
                                     duration: 2,
                                     type: "spring",
@@ -184,15 +99,35 @@ export default function Parallax3() {
                                 }
                             }
                         }
-                        viewport={{ once: false }}
-                    // initial={{ paddingLeft: 1000, paddingRight: -1000 }}
-                    // whileInView={{ paddingLeft: 0, paddingRight: 0 }}
-                    // animate={{ x: 0 }}
-                    // layout
-                    // transition={{ duration: 1, delay: 0.25, ease: "easeInOut" }}
-                    // viewport={{ once: false }}
                     >
-                        <img className="min-h-[500px] min-w-[667px]"
+                        <img className="h-[500px] w-[535px]"
+                            src="/images/thor-attack.png"
+                        />
+                    </motion.div>
+
+                    <motion.div
+                        className="flex flex-col justify-start items-center"
+                        initial={{ x: 1500 }}
+                        animate={
+                            battleContainerInView ? {
+                                x: 0,
+                                transition: {
+                                    duration: 1,
+                                    type: "spring",
+                                    stiffness: 50,
+                                    delay: 1.25
+                                }
+                            } : {
+                                x: 1500,
+                                transition: {
+                                    duration: 2,
+                                    type: "spring",
+                                    stiffness: 50
+                                }
+                            }
+                        }
+                    >
+                        <img className="h-[500px] w-[667px]"
                             src="/images/frost-giant.png" />
                     </motion.div>
                 </motion.div>
