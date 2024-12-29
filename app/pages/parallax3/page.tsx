@@ -1,6 +1,9 @@
 'use client'
 import { motion, useScroll, useTransform, inView, useInView } from "framer-motion";
 import { useState, useRef } from "react";
+import executioner from "@/public/images/executioner.png";
+import frostGiant from "@/public/images/frost-giant.png";
+import thor from "@/public/images/thor2.png";
 
 export default function Parallax3() {
     const { scrollYProgress, scrollY } = useScroll();
@@ -15,6 +18,7 @@ export default function Parallax3() {
     return (
         <div id="page" className="w-full h-full bg-color0-transparent text-color1">
             <motion.div
+                id="thor"
                 className="fixed w-full h-full z-[1] flex flex-col justify-center items-center pointer-events-none"
                 style={{ translateY: y, scale: scaleThor }}
             >
@@ -28,11 +32,11 @@ export default function Parallax3() {
             </video>
 
             <div id="headlineContainer" className="h-[30vh] flex flex-col justify-center items-center bg-color1">
-                <h1 id="headline animationTomahawk" className="px-[1rem] text-color0 text-center text-[10vw] font-serif font-extrabold overflow-hidden overflow-y-hidden drop-shadow-[3px_3px_10px_rgb(255,0,0)]">Thor</h1>
+                <h1 id="headline" className="px-[1rem] text-color0 text-center text-[10vw] font-serif font-extrabold overflow-hidden overflow-y-hidden drop-shadow-[3px_3px_10px_rgb(255,0,0)]">Thor</h1>
             </div>
 
             <div id="overflow" className="px-space10 pb-space10 w-full max-w-full bg-color1 text-color0 overflow-x-hidden text-center">
-                <motion.p id="text1 hidden" className="mt-space8 mb-0 leading-10 text-justify text-2xl"
+                <motion.p id="text1" className="mt-space8 mb-0 leading-10 text-justify text-2xl"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 2, delay: 0.75, ease: "easeInOut" }}
@@ -46,7 +50,7 @@ export default function Parallax3() {
                     character's introduction.
                 </motion.p>
 
-                <motion.p id="text2 hidden" className="mt-space9 mb-0 leading-10 text-justify text-2xl"
+                <motion.p id="text2" className="mt-space9 mb-0 leading-10 text-justify text-2xl"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 2, delay: 0.75, ease: "easeInOut" }}
@@ -59,7 +63,7 @@ export default function Parallax3() {
                     human identities and at times ruled as king of Asgard.
                 </motion.p>
 
-                <motion.p id="text2 hidden" className="mt-space9 mb-0 leading-10 text-justify text-2xl"
+                <motion.p id="text2" className="mt-space9 mb-0 leading-10 text-justify text-2xl"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 2, delay: 0.75, ease: "easeInOut" }}
@@ -99,7 +103,9 @@ export default function Parallax3() {
                             }
                         }
                     >
-                        <img className="h-[500px] w-[535px]"
+                        <img
+                            id="thorBattle"
+                            className="h-[500px] w-[535px]"
                             src="/images/thor-attack.png"
                         />
                     </motion.div>
@@ -126,8 +132,10 @@ export default function Parallax3() {
                             }
                         }
                     >
-                        <img className="h-[500px] w-[667px]"
-                            src="/images/frost-giant.png" />
+                        <img
+                            id="executionerBattle"
+                            className="h-[500px] w-[auto]"
+                            src="/images/executioner.png" />
                     </motion.div>
                 </motion.div>
             </div>
