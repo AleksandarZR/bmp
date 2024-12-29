@@ -32,8 +32,8 @@ export default function Parallax3() {
                 <h1 id="headline animationTomahawk" className="px-[1rem] text-color0 text-center text-[10vw] font-serif font-extrabold overflow-hidden overflow-y-hidden drop-shadow-[3px_3px_10px_rgb(255,0,0)]">Thor</h1>
             </div>
 
-            <div id="overflow" className="pb-[20rem] w-full max-w-full bg-color1 text-color0 overflow-x-hidden text-center">
-                <motion.p id="text1 hidden" className="mt-[2rem] mb-[5rem] px-[10vw] py-0 leading-10 text-justify text-2xl"
+            <div id="overflow" className="px-space10 pb-space10 w-full max-w-full bg-color1 text-color0 overflow-x-hidden text-center">
+                <motion.p id="text1 hidden" className="mt-space8 mb-0 leading-10 text-justify text-2xl"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 2, delay: 0.75, ease: "easeInOut" }}
@@ -47,7 +47,7 @@ export default function Parallax3() {
                     character's introduction.
                 </motion.p>
 
-                <motion.p id="text2 hidden" className="mt-[10rem] mb-[5rem] px-[10vw] py-0 leading-10 text-justify text-2xl"
+                <motion.p id="text2 hidden" className="mt-space9 mb-0 leading-10 text-justify text-2xl"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 2, delay: 0.75, ease: "easeInOut" }}
@@ -60,7 +60,7 @@ export default function Parallax3() {
                     human identities and at times ruled as king of Asgard.
                 </motion.p>
 
-                <motion.p id="text2 hidden" className="mt-[10rem] mb-[5rem] px-[10vw] py-0 leading-10 text-justify text-2xl"
+                <motion.p id="text2 hidden" className="mt-space9 mb-0 leading-10 text-justify text-2xl"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 2, delay: 0.75, ease: "easeInOut" }}
@@ -76,7 +76,7 @@ export default function Parallax3() {
                 <motion.div
                     ref={battleContainerRef}
                     id="battleContainer"
-                    className="w-full min-h-[100px] flex flex-row justify-center items center"
+                    className="mt-space9 w-full min-h-[100px] flex flex-row justify-center items-center bg-yellow-200"
                 >
                     <motion.div
                         className="flex flex-col justify-end items-center"
@@ -131,8 +131,6 @@ export default function Parallax3() {
                             src="/images/frost-giant.png" />
                     </motion.div>
                 </motion.div>
-
-
             </div>
         </div >
     );

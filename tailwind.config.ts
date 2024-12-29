@@ -45,6 +45,8 @@ const config: Config = {
                 space6: "48px",
                 space7: "56px",
                 space8: "64px",
+                space9: "128px",
+                space10: "192px",
 
                 space11: "8px",
                 space12: "16px",
