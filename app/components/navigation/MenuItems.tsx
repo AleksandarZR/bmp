@@ -15,6 +15,7 @@ const MenuItems = (): JSX.Element => {
                 <SubMenuItemLink href={"/pages/parallax1"} label={"Parallax effect 1"} />
                 <SubMenuItemLink href={"/pages/parallax2"} label={"Parallax effect 2"} />
                 <SubMenuItemLink href={"/pages/parallax3"} label={"Parallax effect 3"} />
+                <SubMenuItemLink href={"/pages/parallax4"} label={"Parallax effect 4"} />
             </MenuItemWithSubMenu>
 
             <MenuItemLink href={"/pages/settings"} label={"Settings"} />

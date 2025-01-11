@@ -95,7 +95,7 @@ export default function Home() {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 3, delay: 0.75, ease: "easeInOut" }}
                     viewport={{ once: false }}>
-                    <h1 className="text-3xl text-color8">Outsorcing</h1>
+                    <h1 className="text-3xl text-color8">Outsourcing</h1>
                     <div>We build custom software solutions using blockchain, machine learning, and AR/VR and integrate them with client's existing IT systems.</div>
                 </motion.div>
             </div>
