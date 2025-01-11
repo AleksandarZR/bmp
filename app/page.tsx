@@ -11,7 +11,10 @@ export default function Home() {
         // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] ">
         <main className=" min-w-screen min-h-screen flex flex-col justify-start items-center sm:items-start bg-color1-transparent overflow-x-hidden">
             <div id="view1" className="pt-space9 w-screen max-w-full h-screen flex flex-col justify-between items-center overflow-x-hidden">
-                <div id="imageContainer" className="h-[70%]">
+                <motion.div id="imageContainer" className="h-[70%]"
+                    animate={{ scale: [0.95, 1, 0.95]}}
+                    transition={{ duration: 10, ease: "easeInOut", repeat: Infinity }}
+                    viewport={{ once: false }}>
                     <Image
                         src={logo}
                         width={500}
@@ -19,7 +22,8 @@ export default function Home() {
                         alt="Picture of the author"
                     >
                     </Image>
-                </div>
+                </motion.div>
+                
                 <div className="w-full h-[30%] flex flex-col justify-center items-center text-2xl text-color0">
                     <div className="text-color7"><span className="text-color8">42computing</span> is a deep tech research and development company.</div>
                     <div className="text-color7">Our vision is to build superior solutions for real-world problems using blockchain, distributed systems, artificial intelligence, computer vision, and AR/VR.</div>
