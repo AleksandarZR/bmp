@@ -9,9 +9,9 @@ import { motion } from "framer-motion";
 export default function Home() {
     return (
         // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] ">
-        <main className=" min-w-screen min-h-screen flex flex-col justify-start items-center sm:items-start bg-color1-transparent overflow-x-hidden">
+        <main className="px-space2 min-w-screen min-h-screen flex flex-col justify-start items-center sm:items-start bg-color1-transparent overflow-x-hidden">
             <div id="view1" className="pt-space9 w-screen max-w-full h-screen flex flex-col justify-between items-center overflow-x-hidden">
-                <motion.div id="imageContainer" className="h-[70%]"
+                <motion.div id="imageContainer" className="lg:h-[70%] md:h-[70%]"
                     animate={{ scale: [0.95, 1, 0.95]}}
                     transition={{ duration: 10, ease: "easeInOut", repeat: Infinity }}
                     viewport={{ once: false }}>
@@ -24,14 +24,14 @@ export default function Home() {
                     </Image>
                 </motion.div>
                 
-                <div className="w-full h-[30%] flex flex-col justify-center items-center text-2xl text-color0">
+                <div className="w-full lg:h-[30%] md:h-[30%] flex flex-col justify-center items-center text-2xl text-color0 text-center">
                     <div className="text-color7"><span className="text-color8">42computing</span> is a deep tech research and development company.</div>
                     <div className="text-color7">Our vision is to build superior solutions for real-world problems using blockchain, distributed systems, artificial intelligence, computer vision, and AR/VR.</div>
                     <div className="text-color7">We use cutting-edge knowledge to help organizations augment and transform their business processes.</div>
                 </div>
             </div>
 
-            <div id="grid" className="pt-space8 w-screen max-w-full h-screen max-h-full grid grid-rows-3 grid-cols-2 text-color7 text-2xl">
+            <div id="grid" className="pt-space8 w-screen max-w-full lg:h-screen md:h-screen max-h-full grid grid-rows-3 grid-cols-2 text-color7 text-2xl sm:text-xl">
                 <div id="11" className="p-space5 flex flex-col justify-center items-end">
                     <Image
                         src={consulting}
@@ -39,7 +39,7 @@ export default function Home() {
                         height={0}
                         alt="Picture of the author"
                         style={{
-                            height: "100%",
+                            maxHeight: "100%",
                             width: "auto",
                         }}
                     >
@@ -73,7 +73,7 @@ export default function Home() {
                         height={0}
                         alt="Picture of the author"
                         style={{
-                            height: "100%",
+                            maxHeight: "100%",
                             width: "auto",
                         }}
                     >
@@ -87,7 +87,7 @@ export default function Home() {
                         height={0}
                         alt="Picture of the author"
                         style={{
-                            height: "100%",
+                            maxHeight: "100%",
                             width: "auto",
                         }}
                     >
