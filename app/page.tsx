@@ -31,7 +31,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div id="grid" className="pt-space8 w-screen max-w-full lg:h-screen md:h-screen max-h-full grid grid-rows-3 grid-cols-2 text-color7 text-2xl sm:text-xl">
+            <div id="grid" className="pt-space8 w-screen max-w-full lg:h-screen max-h-full grid grid-rows-3 grid-cols-2 text-color7 text-2xl sm:text-xl">
                 <div id="11" className="p-space5 flex flex-col justify-center items-end">
                     <Image
                         src={consulting}
