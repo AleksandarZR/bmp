@@ -1,30 +1,60 @@
 "use client"
 import Image from "next/image";
 import logo from "@/public/images/logo.png";
+import logo2 from "@/public/images/logo2.png";
+import logo3 from "@/public/images/logo3.png";
 import consulting from "@/public/images/consulting.png";
 import rnd from "@/public/images/rnd.png";
 import outsorcing from "@/public/images/outsorcing.png";
 import { motion } from "framer-motion";
 import CoveredImageFlexible from "./components/common/CoveredImageFlexible";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+    const [activeLogo, setActiveLogo] = useState(logo);
+    const [count, setCount] = useState(1);
+    const logos = [logo3, logo2, logo];
+
+    useEffect(() => {
+        let timer = setTimeout(() => {
+            if (count === 1) {
+                setActiveLogo(logo3);
+            }
+            if (count === 2) {
+                setActiveLogo(logo2);
+            }
+            if (count === 3) {
+                setActiveLogo(logo);
+            }
+            if (count > 5) {
+                setCount(0);
+            } else {
+                setCount((count) => count + 1);
+            }
+        }, 1000);
+
+        // Some effects require cleanup to reduce memory leaks. Timeouts, subscriptions, event listeners
+        return () => clearTimeout(timer)
+    }, [count, activeLogo]);
+
     return (
         // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] ">
         <main className="px-space5 min-w-screen min-h-screen flex flex-col justify-start items-center sm:items-start bg-color1-transparent overflow-x-hidden">
             <div id="view1" className="pt-space9 w-screen max-w-full h-screen flex flex-col justify-between items-center overflow-x-hidden">
                 <motion.div id="imageContainer" className="lg:h-[70%] md:h-[70%]"
-                    animate={{ scale: [0.95, 1, 0.95]}}
-                    transition={{ duration: 10, ease: "easeInOut", repeat: Infinity }}
-                    viewport={{ once: false }}>
+                    // animate={{ scale: [0.95, 1, 0.95] }}
+                    // transition={{ duration: 10, ease: "easeInOut", repeat: Infinity }}
+                    // viewport={{ once: false }}
+                >
                     <Image
-                        src={logo}
+                        src={activeLogo}
                         width={500}
                         height={500}
                         alt="Picture of the author"
                     >
                     </Image>
                 </motion.div>
-                
+
                 <div className="w-full lg:h-[30%] md:h-[30%] flex flex-col justify-center items-center text-2xl text-color0 text-center">
                     <div className="text-color7"><span className="text-color8">42computing</span> is a deep tech research and development company.</div>
                     <div className="text-color7">Our vision is to build superior solutions for real-world problems using blockchain, distributed systems, artificial intelligence, computer vision, and AR/VR.</div>
@@ -45,7 +75,7 @@ export default function Home() {
                         }}
                     >
                     </Image> */}
-                    <CoveredImageFlexible customStyle="max-h-[100%] bg-white" imagePath="/images/consulting.png"/>
+                    <CoveredImageFlexible customStyle="max-h-[100%] bg-white" imagePath="/images/consulting.png" />
                 </div>
 
                 <motion.div id="12" className="p-space5 flex flex-col justify-around items-start"
@@ -80,7 +110,7 @@ export default function Home() {
                         }}
                     >
                     </Image> */}
-                    <CoveredImageFlexible customStyle="max-h-[100%] bg-color0" imagePath="/images/rnd.png"/>
+                    <CoveredImageFlexible customStyle="max-h-[100%] bg-color0" imagePath="/images/rnd.png" />
                 </div>
 
                 <div id="31" className="p-space5 flex flex-col justify-center items-end">
@@ -95,7 +125,7 @@ export default function Home() {
                         }}
                     >
                     </Image> */}
-                    <CoveredImageFlexible customStyle="max-h-[100%] w-[auto] bg-white" imagePath="/images/outsorcing.png"/>
+                    <CoveredImageFlexible customStyle="max-h-[100%] w-[auto] bg-white" imagePath="/images/outsorcing.png" />
                 </div>
 
                 <motion.div id="32" className="p-space5 flex flex-col justify-around items-start"
