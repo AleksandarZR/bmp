@@ -1,8 +1,8 @@
 "use client"
 import Image from "next/image";
-import logo from "@/public/images/logo.png";
-import logo2 from "@/public/images/logo2.png";
-import logo3 from "@/public/images/logo3.png";
+import logo from "@/public/images/logo21.png";
+import logo3 from "@/public/images/logo22.png";
+import logo2 from "@/public/images/logo23.png";
 import consulting from "@/public/images/consulting.png";
 import rnd from "@/public/images/rnd.png";
 import outsorcing from "@/public/images/outsorcing.png";
@@ -38,14 +38,9 @@ export default function Home() {
     }, [count, activeLogo]);
 
     return (
-        // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] ">
-        <main className="px-space5 min-w-screen min-h-screen flex flex-col justify-start items-center sm:items-start bg-color1-transparent overflow-x-hidden">
+        <main className="px-space5 min-w-screen min-h-screen flex flex-col justify-start items-center sm:items-start bg-color12 overflow-x-hidden">
             <div id="view1" className="pt-space9 w-screen max-w-full h-screen flex flex-col justify-between items-center overflow-x-hidden">
-                <motion.div id="imageContainer" className="lg:h-[70%] md:h-[70%]"
-                    // animate={{ scale: [0.95, 1, 0.95] }}
-                    // transition={{ duration: 10, ease: "easeInOut", repeat: Infinity }}
-                    // viewport={{ once: false }}
-                >
+                <motion.div id="imageContainer" className="lg:h-[70%] md:h-[70%]">
                     <Image
                         src={activeLogo}
                         width={500}
@@ -64,17 +59,6 @@ export default function Home() {
 
             <div id="grid" className="pt-space8 w-screen max-w-full lg:h-screen max-h-full grid grid-rows-3 grid-cols-2 text-color7 text-2xl sm:text-xl">
                 <div id="11" className="p-space5 flex flex-col justify-center items-end">
-                    {/* <Image
-                        src={consulting}
-                        width={0}
-                        height={0}
-                        alt="Picture of the author"
-                        style={{
-                            maxHeight: "100%",
-                            width: "auto",
-                        }}
-                    >
-                    </Image> */}
                     <CoveredImageFlexible customStyle="max-h-[100%] bg-white" imagePath="/images/consulting.png" />
                 </div>
 
@@ -99,32 +83,10 @@ export default function Home() {
                 </motion.div>
 
                 <div id="22" className="p-space5 flex flex-col justify-center items-start">
-                    {/* <Image
-                        src={rnd}
-                        width={0}
-                        height={0}
-                        alt="Picture of the author"
-                        style={{
-                            maxHeight: "100%",
-                            width: "auto",
-                        }}
-                    >
-                    </Image> */}
                     <CoveredImageFlexible customStyle="max-h-[100%] bg-color0" imagePath="/images/rnd.png" />
                 </div>
 
                 <div id="31" className="p-space5 flex flex-col justify-center items-end">
-                    {/* <Image
-                        src={outsorcing}
-                        width={0}
-                        height={0}
-                        alt="Picture of the author"
-                        style={{
-                            maxHeight: "100%",
-                            width: "auto",
-                        }}
-                    >
-                    </Image> */}
                     <CoveredImageFlexible customStyle="max-h-[100%] w-[auto] bg-white" imagePath="/images/outsorcing.png" />
                 </div>
 
@@ -138,7 +100,5 @@ export default function Home() {
                 </motion.div>
             </div>
         </main>
-
-        // </div>
     );
 }
