@@ -14,7 +14,7 @@ export default function Components1() {
         <div className="px-space5 pt-space9 w-full h-full flex flex-col justify-start items-start bg-color0-transparent text-color1">
             <ProgressBarCircular></ProgressBarCircular>
             {/* <CoveredImage></CoveredImage> */}
-            <CoveredImageFlexible customStyle="w-[200px] h-[200px]"></CoveredImageFlexible>
+            <CoveredImageFlexible customStyle="w-[200px] h-[200px] bg-white" imagePath="/images/consulting.png"></CoveredImageFlexible>
         </div>
     );
 }

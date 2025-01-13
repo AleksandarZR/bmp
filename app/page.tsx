@@ -5,6 +5,7 @@ import consulting from "@/public/images/consulting.png";
 import rnd from "@/public/images/rnd.png";
 import outsorcing from "@/public/images/outsorcing.png";
 import { motion } from "framer-motion";
+import CoveredImageFlexible from "./components/common/CoveredImageFlexible";
 
 export default function Home() {
     return (
@@ -33,7 +34,7 @@ export default function Home() {
 
             <div id="grid" className="pt-space8 w-screen max-w-full lg:h-screen max-h-full grid grid-rows-3 grid-cols-2 text-color7 text-2xl sm:text-xl">
                 <div id="11" className="p-space5 flex flex-col justify-center items-end">
-                    <Image
+                    {/* <Image
                         src={consulting}
                         width={0}
                         height={0}
@@ -43,7 +44,8 @@ export default function Home() {
                             width: "auto",
                         }}
                     >
-                    </Image>
+                    </Image> */}
+                    <CoveredImageFlexible customStyle="max-h-[100%] bg-white" imagePath="/images/consulting.png"/>
                 </div>
 
                 <motion.div id="12" className="p-space5 flex flex-col justify-around items-start"
@@ -67,7 +69,7 @@ export default function Home() {
                 </motion.div>
 
                 <div id="22" className="p-space5 flex flex-col justify-center items-start">
-                    <Image
+                    {/* <Image
                         src={rnd}
                         width={0}
                         height={0}
@@ -77,11 +79,12 @@ export default function Home() {
                             width: "auto",
                         }}
                     >
-                    </Image>
+                    </Image> */}
+                    <CoveredImageFlexible customStyle="max-h-[100%] bg-white" imagePath="/images/rnd.png"/>
                 </div>
 
                 <div id="31" className="p-space5 flex flex-col justify-center items-end">
-                    <Image
+                    {/* <Image
                         src={outsorcing}
                         width={0}
                         height={0}
@@ -91,7 +94,8 @@ export default function Home() {
                             width: "auto",
                         }}
                     >
-                    </Image>
+                    </Image> */}
+                    <CoveredImageFlexible customStyle="max-h-[100%] bg-white" imagePath="/images/outsorcing.png"/>
                 </div>
 
                 <motion.div id="32" className="p-space5 flex flex-col justify-around items-start"
