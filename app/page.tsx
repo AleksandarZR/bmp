@@ -10,7 +10,7 @@ import CoveredImageFlexible from "./components/common/CoveredImageFlexible";
 export default function Home() {
     return (
         // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] ">
-        <main className="px-space2 min-w-screen min-h-screen flex flex-col justify-start items-center sm:items-start bg-color1-transparent overflow-x-hidden">
+        <main className="px-space5 min-w-screen min-h-screen flex flex-col justify-start items-center sm:items-start bg-color1-transparent overflow-x-hidden">
             <div id="view1" className="pt-space9 w-screen max-w-full h-screen flex flex-col justify-between items-center overflow-x-hidden">
                 <motion.div id="imageContainer" className="lg:h-[70%] md:h-[70%]"
                     animate={{ scale: [0.95, 1, 0.95]}}
@@ -80,7 +80,7 @@ export default function Home() {
                         }}
                     >
                     </Image> */}
-                    <CoveredImageFlexible customStyle="max-h-[100%] bg-white" imagePath="/images/rnd.png"/>
+                    <CoveredImageFlexible customStyle="max-h-[100%] bg-color0" imagePath="/images/rnd.png"/>
                 </div>
 
                 <div id="31" className="p-space5 flex flex-col justify-center items-end">
@@ -95,7 +95,7 @@ export default function Home() {
                         }}
                     >
                     </Image> */}
-                    <CoveredImageFlexible customStyle="max-h-[100%] bg-white" imagePath="/images/outsorcing.png"/>
+                    <CoveredImageFlexible customStyle="max-h-[100%] w-[auto] bg-white" imagePath="/images/outsorcing.png"/>
                 </div>
 
                 <motion.div id="32" className="p-space5 flex flex-col justify-around items-start"

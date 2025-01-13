@@ -13,7 +13,7 @@ const Navigation = ({ session }: any) => {
     return (
         <>
             {/* Desktop Navigation */}
-            <div className="md:hidden sm:hidden flex flex-row justify-between items-center w-full h-20 fixed top-0 left-0 z-100 pt-4 pb-4 px-space2 bg-color1-transparent border-b-2">
+            <div className="md:hidden sm:hidden flex flex-row justify-between items-center w-full h-20 fixed top-0 left-0 z-100 pt-4 pb-4 px-space5 bg-color1-transparent border-b-2">
                 <div>
                     <LogoDesktop session={session} />
                 </div>
@@ -33,7 +33,7 @@ const Navigation = ({ session }: any) => {
             </div>
 
             {/* Mobile Navigation */}
-            <div className="lg:hidden flex flex-row justify-between items-center w-full max-w-full h-20 fixed top-0 left-0 z-100 pt-4 pb-4 pl-space1 pr-space1 bg-color1-transparent border-b-2">
+            <div className="lg:hidden flex flex-row justify-between items-center w-full max-w-full h-20 fixed top-0 left-0 z-100 pt-4 pb-4 px-space1 bg-color1-transparent border-b-2">
                 <DropDownMenu session={session} />
 
                 {/* Center the Logo */}
