@@ -3,10 +3,14 @@ import Image from "next/image";
 import image from "@/public/images/consulting.png";
 import { motion, useScroll } from "framer-motion";
 
-const CoveredImage = () => {
+interface Properties {
+    customStyle: string;
+}
+
+const CoveredImageFlexible = ({customStyle}: Properties) => {
     return (
-        <div id="image-container" className="relative bg-white">
-            <motion.div className="absolute w-[256px] h-[512px] bg-color1-transparent"
+        <div id="image-container" className={`relative bg-white ${customStyle}`}>
+            <motion.div className="absolute w-[50%] h-[100%] bg-color2-transparent"
                 animate={{ scaleX: [1, 0], origin: "left" }}
                 transition={{ duration: 3, ease: "easeInOut", repeat: 0 }}
                 viewport={{ once: true }}
@@ -14,21 +18,21 @@ const CoveredImage = () => {
             >
             </motion.div>
 
-            <motion.div className="absolute left-[256px] w-[257px] h-[512px] bg-color1-transparent"
+            <motion.div className="absolute left-[50%] w-[50%] h-[100%] bg-color2-transparent"
                 animate={{ scaleX: [1, 0] }}
                 transition={{ duration: 3, ease: "easeInOut", repeat: 0 }}
                 viewport={{ once: true }}
-                style={{originX: 1}}
+                style={{originX: "right"}}
             >
             </motion.div>
 
             <Image
                 src={image}
-                alt="Logo"
-                className="h-auto w-auto"
+                alt="image"
+                className="h-full w-full"
             />
         </div>
     );
 };
 
-export default CoveredImage;
+export default CoveredImageFlexible;

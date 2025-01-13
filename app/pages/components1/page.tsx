@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import ProgressBarCircular from "@/app/components/common/ProgressBarCircular";
 import CoveredImage from "@/app/components/common/CoveredImage";
+import CoveredImageFlexible from "../../components/common/CoveredImageFlexible";
 
 
 export default function Components1() {
@@ -12,7 +13,8 @@ export default function Components1() {
     return (
         <div className="px-space5 pt-space9 w-full h-full flex flex-col justify-start items-start bg-color0-transparent text-color1">
             <ProgressBarCircular></ProgressBarCircular>
-            <CoveredImage></CoveredImage>
+            {/* <CoveredImage></CoveredImage> */}
+            <CoveredImageFlexible customStyle="w-[200px] h-[200px]"></CoveredImageFlexible>
         </div>
     );
 }
