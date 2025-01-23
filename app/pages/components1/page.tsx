@@ -11,14 +11,14 @@ export default function Components1() {
     const { scrollXProgress } = useScroll({ container: ref });
 
     return (
-        <div className="px-space5 pt-space9 w-full h-full flex flex-col justify-start items-start bg-color12 text-color1">
+        <div className="px-space5 pt-space9 w-full h-full flex flex-col justify-start items-start bg-color0-transparent text-color1">
             <ProgressBarCircular></ProgressBarCircular>
             {/* <CoveredImage></CoveredImage> */}
             <CoveredImageFlexible customStyle="w-[200px] h-[200px] bg-white" imagePath="/images/consulting.png"></CoveredImageFlexible>
 
             <CoveredImage></CoveredImage>
 
-            <CoveredImageFlexible customStyle="w-[128px] h-[256px] bg-white" imagePath="/images/consulting.png"></CoveredImageFlexible>
+            <CoveredImageFlexible customStyle="w-[256px] h-[256px] bg-white" imagePath="/images/consulting.png"></CoveredImageFlexible>
         </div>
     );
 }
