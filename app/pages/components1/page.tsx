@@ -15,6 +15,10 @@ export default function Components1() {
             <ProgressBarCircular></ProgressBarCircular>
             {/* <CoveredImage></CoveredImage> */}
             <CoveredImageFlexible customStyle="w-[200px] h-[200px] bg-white" imagePath="/images/consulting.png"></CoveredImageFlexible>
+
+            <CoveredImage></CoveredImage>
+
+            <CoveredImageFlexible customStyle="w-[128px] h-[256px] bg-white" imagePath="/images/consulting.png"></CoveredImageFlexible>
         </div>
     );
 }

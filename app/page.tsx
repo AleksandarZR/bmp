@@ -38,7 +38,7 @@ export default function Home() {
     }, [count, activeLogo]);
 
     return (
-        <main className="px-space5 min-w-screen min-h-screen flex flex-col justify-start items-center sm:items-start bg-color12 overflow-x-hidden">
+        <main className="px-space5 min-w-screen min-h-screen flex flex-col justify-start items-center sm:items-start bg-color1-transparent overflow-x-hidden">
             <div id="view1" className="pt-space9 w-screen max-w-full h-screen flex flex-col justify-between items-center overflow-x-hidden">
                 <motion.div id="imageContainer" className="lg:h-[70%] md:h-[70%]">
                     <Image
@@ -65,7 +65,7 @@ export default function Home() {
                 <motion.div id="12" className="p-space5 flex flex-col justify-around items-start"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ duration: 3, delay: 0.75, ease: "easeInOut" }}
+                    transition={{ duration: 5, delay: 0.75, ease: "easeInOut" }}
                     viewport={{ once: false }}
                 >
                     <h1 className="text-3xl text-color8">Consulting</h1>
@@ -75,7 +75,7 @@ export default function Home() {
                 <motion.div id="21" className="p-space5 flex flex-col justify-around items-end"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ duration: 3, delay: 0.75, ease: "easeInOut" }}
+                    transition={{ duration: 5, delay: 0.75, ease: "easeInOut" }}
                     viewport={{ once: false }}
                 >
                     <h1 className="text-3xl text-color8">Research & Development</h1>
@@ -93,7 +93,7 @@ export default function Home() {
                 <motion.div id="32" className="p-space5 flex flex-col justify-around items-start"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ duration: 3, delay: 0.75, ease: "easeInOut" }}
+                    transition={{ duration: 5, delay: 0.75, ease: "easeInOut" }}
                     viewport={{ once: false }}>
                     <h1 className="text-3xl text-color8">Outsourcing</h1>
                     <div>We build custom software solutions using blockchain, machine learning, and AR/VR and integrate them with client's existing IT systems.</div>

@@ -12,7 +12,7 @@ interface Properties {
 const CoveredImageFlexible = ({customStyle, imagePath}: Properties): JSX.Element => {
     return (
         <div id="image-container" className={`relative ${customStyle}`}>
-            <motion.div className="absolute min-w-[50%] min-h-[100%] bg-color2-transparent"
+            <motion.div className="absolute left-0 min-w-[50%] min-h-[100%] bg-color2-transparent"
                 // animate={{ scaleX: [1, 0] }}
                 initial={{ scaleX: 1 }}
                 whileInView={{ scaleX: 0 }}

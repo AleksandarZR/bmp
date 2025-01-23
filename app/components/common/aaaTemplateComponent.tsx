@@ -3,8 +3,9 @@
 import { JSX } from "react";
 
 interface Properties {
-    customStyle: string;
-    imagePath: string;
+    customStyle?: string;
+    imagePath?: string;
+    children?: JSX.Element | JSX.Element[]; // in case child elements are needed
 }
 
 /* https://github.com/facebook/create-react-app/pull/8177
@@ -20,7 +21,7 @@ Benefits of React.FC:
 1. Provides an explicit return type  */
 
 // This is prefered approach to define a component
-const Template = ({ customStyle, imagePath }: Properties): JSX.Element => {
+const Template = ({ customStyle="", imagePath, children }: Properties): JSX.Element => {
     return (
         <div
             id="container"
@@ -28,6 +29,8 @@ const Template = ({ customStyle, imagePath }: Properties): JSX.Element => {
             className={`relative w-full h-full ${customStyle}`}
         >
             <h1>Template</h1>
+
+            {children}
         </div>
     );
 };
