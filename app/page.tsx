@@ -39,12 +39,12 @@ export default function Home() {
 
     return (
         <main className="px-space5 min-w-screen min-h-screen flex flex-col justify-start items-center sm:items-start bg-color1-transparent overflow-x-hidden">
-            <div id="view1" className="pt-space9 w-screen max-w-full h-screen flex flex-col justify-between items-center overflow-x-hidden">
-                <motion.div id="imageContainer" className="lg:h-[70%] md:h-[70%]">
+            <div id="view1" className="pt-space9 w-screen max-w-full h-screen flex flex-col justify-around items-center overflow-x-hidden">
+                <motion.div id="imageContainer" className="lg:h-[auto] md:h-[70%] w-[auto] bg-color1">
                     <Image
                         src={activeLogo}
-                        width={500}
-                        height={500}
+                        width={300}
+                        height={300}
                         alt="Picture of the author"
                     >
                     </Image>
@@ -79,7 +79,7 @@ export default function Home() {
                     viewport={{ once: false }}
                 >
                     <h1 className="text-3xl text-color8">Research & Development</h1>
-                    <div className="text-end">We perform state-of-the-art research leading to feasibiity studies and rapid software prototype design and development.</div>
+                    <div className="text-end">We perform state-of-the-art research leading to feasibility studies and rapid software prototype design and development.</div>
                 </motion.div>
 
                 <div id="22" className="p-space5 flex flex-col justify-center items-start">

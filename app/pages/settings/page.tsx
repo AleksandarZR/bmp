@@ -3,7 +3,7 @@ import CardTextLine from "@/app/components/common/CardTextLine";
 
 export default function Settings() {
     return (
-        <div className="pt-space9 pb-space5 px-space5 sm:px-space1 w-full min-h-full grid grid-cols-3 sm:flex sm:flex-col gap-space5 bg-color0-transparent text-color1">
+        <div className="pt-space9 pb-space5 px-space5 sm:px-space21 w-full min-h-full grid grid-cols-3 sm:flex sm:flex-col gap-space5 bg-color10 text-color1">
             <Card header="Tailwind Config">
                 <CardTextLine
                     textLine="Large screen values for paddings, margins:"
@@ -45,7 +45,7 @@ export default function Settings() {
                 <CardTextLine textLine="..."></CardTextLine>
             </Card>
 
-            <Card header="Eslint Config">
+            <Card header="ESLint Config">
             <CardTextLine
                     textLine="Formater settings:"
                     customStyle="font-bold text-xl"

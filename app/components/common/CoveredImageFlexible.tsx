@@ -6,7 +6,7 @@ import { JSX } from "react";
 
 interface Properties {
     customStyle: string;
-    imagePath: string;
+    imagePath: string
 }
 
 const CoveredImageFlexible = ({customStyle, imagePath}: Properties): JSX.Element => {
@@ -18,7 +18,7 @@ const CoveredImageFlexible = ({customStyle, imagePath}: Properties): JSX.Element
                 whileInView={{ scaleX: 0 }}
                 transition={{ duration: 3, delay: 0.75, ease: "easeInOut" }}
                 viewport={{ once: false }}
-                style={{originX: 0}}
+                style={{originX: "left"}}
             >
             </motion.div>
 
@@ -35,7 +35,7 @@ const CoveredImageFlexible = ({customStyle, imagePath}: Properties): JSX.Element
             <img
                 src={imagePath}
                 alt="image"
-                className="h-full w-full"
+                className="h-full w-auto"
             />
         </div>
     );
