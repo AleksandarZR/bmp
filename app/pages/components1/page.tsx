@@ -29,7 +29,7 @@ export default function Components1() {
 
             <ButtonLink text="Home" link="/"></ButtonLink>
 
-            <ButtonClick text="Click me" handler={buttonClick} state={ButtonState.ENABLED}/>
+            <ButtonClick text="Click me" handler={buttonClick} state={ButtonState.ENABLED} customStyle="bg-white"/>
         </div>
     );
 }
