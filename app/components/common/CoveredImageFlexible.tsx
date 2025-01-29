@@ -35,7 +35,7 @@ const CoveredImageFlexible = ({customStyle, imagePath}: Properties): JSX.Element
             <img
                 src={imagePath}
                 alt="image"
-                className="h-full w-auto"
+                className="h-full w-full min-h-full min-w-full"
             />
         </div>
     );
