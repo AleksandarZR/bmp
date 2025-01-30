@@ -2,8 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/public/images/logo.png";
+import { JSX } from "react";
 
-const LogoMob = ({ session }: any) => {
+const LogoMob = ({ session }: any): JSX.Element => {
     return (
         <>
             <Link

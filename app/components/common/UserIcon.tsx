@@ -3,11 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import icon from "@/public/svg/profile-icon.svg";
-import { useEffect, useRef, useState } from "react";
+import { JSX, useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 //import { useClickOutside } from "../../hooks/useOutsideClick";
 
-const Logo = () => {
+const Logo = (): JSX.Element => {
     const dropdownRef = useRef<HTMLDivElement | null>(null);
     const pathname = usePathname();
     const lang = pathname.split("/")[1];

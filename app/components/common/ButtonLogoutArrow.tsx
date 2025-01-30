@@ -2,8 +2,9 @@ import Link from "next/link";
 import arrow from "@/public/svg/arrow-reverse.svg";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { JSX } from "react";
 
-export default function ButtonLogoutArrow() {
+const ButtonLogoutArrow = (): JSX.Element => {
     const router = useRouter();
 
     const handleLogout = async () => {
@@ -20,4 +21,6 @@ export default function ButtonLogoutArrow() {
             Logout
         </div>
     );
-}
+};
+
+export default ButtonLogoutArrow;

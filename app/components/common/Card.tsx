@@ -12,7 +12,6 @@ const Card = ({ customStyle = "", header = "Header", children }: Properties): JS
     return (
         <div
             id="container"
-            // Allow it to receive a custom style
             className={`p-0 min-h-[550px] bg-color0 rounded shadow-[8px_8px_8px_8px_rgba(0,0,0,0.2)] flex flex-col justify-start items-start ${customStyle}`}
         >
             <h1 className="py-space2 w-full text-center text-color8 font-bold bg-color7 rounded text-3xl">{header}</h1>

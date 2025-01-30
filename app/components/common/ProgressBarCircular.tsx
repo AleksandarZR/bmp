@@ -1,8 +1,8 @@
 "use client"
-import { useRef } from "react";
+import { JSX, useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 
-export default function ProgressBarcircular() {
+const ProgressBarcircular = (): JSX.Element => {
     const ref = useRef(null);
     const { scrollXProgress } = useScroll({ container: ref });
 
@@ -37,3 +37,5 @@ export default function ProgressBarcircular() {
         </div>
     );
 }
+
+export default ProgressBarcircular;

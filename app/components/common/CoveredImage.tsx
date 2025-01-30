@@ -2,8 +2,9 @@
 import Image from "next/image";
 import image from "@/public/images/consulting.png";
 import { motion, useScroll } from "framer-motion";
+import { JSX } from "react";
 
-const CoveredImage = () => {
+const CoveredImage = (): JSX.Element => {
     return (
         <div id="image-container" className="relative bg-white">
             <motion.div className="absolute w-[256px] h-[512px] bg-color1-transparent"

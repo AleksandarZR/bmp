@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { JSX } from "react";
 import LogoDesktop from "@/app/components/common/LogoDesktop";
 import DropDownMenu from "@/app/components/navigation/DropdownMenu";
 import LogoMob from "@/app/components/common/LogoMob";
@@ -9,7 +9,7 @@ import LogoutButtonArrow from "@/app/components/common/ButtonLogoutArrow";
 import UserIcon from "@/app/components/common/UserIcon";
 import Arrow from "@/app/components/common/Arrow";
 
-const Navigation = ({ session }: any) => {
+const Navigation = ({ session }: any): JSX.Element => {
     return (
         <>
             {/* Desktop Navigation */}

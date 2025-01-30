@@ -11,8 +11,6 @@ const CardTextLine = ({
     customStyle = "",
     textLine,
 }: Properties): JSX.Element => {
-    let a = "aaa";
-
     return (
         <div id="container" className={`w-full ${customStyle}`}>
             <div>{textLine}</div>

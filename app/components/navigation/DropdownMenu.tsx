@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, JSX } from "react";
 import Image from "next/image";
 import hamburger2 from "@/public/svg/hamburger.svg";
 import { useClickOutside } from "@/app/hooks/useOutsideClick";
@@ -9,7 +9,7 @@ import DropDownMenuItemWithSubMenu from "@/app/components/navigation/DropDownMen
 import SubMenuItemLink from "@/app/components/navigation/SubMenuItemLink";
 import MenuItemLink from "@/app/components/navigation/MenuItemLink";
 
-const DropDownMenu = ({ session }: { session: Session }) => {
+const DropDownMenu = ({ session }: { session: Session }): JSX.Element => {
     const dropdownRef = useRef<HTMLDivElement | null>(null);
     const [dropDownVisible, setDropDownVisible] = useState(false);
 
