@@ -25,6 +25,41 @@
     --color10: rgb(43, 76, 93);
     --color11: rgb(4, 207, 52);
     --color12: rgb(29, 31, 30);
+
+    --navheight: 80px;
+
+    --space1: 8px;
+    --space2: 16px;
+    --space3: 24px;
+    --space4: 32px;
+    --space5: 40px;
+    --space6: 48px;
+    --space7: 56px;
+    --space8: 64px;
+    --space9: 128px;
+    --space10: 192px;
+
+    --space11: 8px;
+    --space12: 16px;
+    --space13: 24px;
+    --space14: 32px;
+    --space15: 40px;
+    --space16: 48px;
+    --space17: 56px;
+    --space18: 64px;
+    --space19: 128px;
+    --space20: 192px;
+
+    --space21: 8px;
+    --space22: 16px;
+    --space23: 24px;
+    --space24: 32px;
+    --space25: 40px;
+    --space26: 48px;
+    --space27: 56px;
+    --space28: 64px;
+    --space29: 128px;
+    --space30: 192px;
 }
 
 @media (prefers-color-scheme: dark) {

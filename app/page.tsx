@@ -38,8 +38,8 @@ export default function Home() {
     }, [count, activeLogo]);
 
     return (
-        <main className="px-space5 min-w-screen min-h-screen flex flex-col justify-start items-center sm:items-start bg-color1-transparent overflow-x-hidden">
-            <div id="view1" className="pt-space9 w-screen max-w-full h-screen flex flex-col justify-around items-center overflow-x-hidden">
+        <main className="pt-[calc(var(--navheight)+var(--space5))] px-space5 pb-space5 min-w-screen min-h-screen flex flex-col justify-start items-center sm:items-start bg-color1-transparent overflow-x-hidden">
+            <div id="view1" className="w-screen max-w-full h-screen flex flex-col justify-around items-center overflow-x-hidden">
                 <motion.div id="imageContainer" className="lg:h-[auto] md:h-[70%] w-[auto] bg-color1">
                     <Image
                         src={activeLogo}
@@ -57,12 +57,12 @@ export default function Home() {
                 </div>
             </div>
 
-            <div id="grid" className="pt-space8 w-screen max-w-full lg:h-screen max-h-full grid grid-rows-3 grid-cols-2 text-color7 text-2xl sm:text-xl">
-                <div id="11" className="p-space5 flex flex-col justify-center items-end">
+            <div id="view2" className="pt-[calc(var(--navheight)+2*var(--space5))] w-screen max-w-full lg:h-screen grid grid-rows-3 grid-cols-2 gap-space5 text-color7 text-2xl sm:text-xl">
+                <div id="11" className="flex flex-col justify-center items-end">
                     <CoveredImageFlexible customStyle="max-h-[100%] bg-white" imagePath="/images/consulting.png" />
                 </div>
 
-                <motion.div id="12" className="p-space5 flex flex-col justify-around items-start"
+                <motion.div id="12" className="flex flex-col justify-around items-start"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 5, delay: 0.75, ease: "easeInOut" }}
@@ -72,7 +72,7 @@ export default function Home() {
                     <div className="pt-space3">We offer strategic architecting and consulting, as well as innovation workshops. We provide technical leadership and help to determine bounds of what’s currently technically possible.</div>
                 </motion.div>
 
-                <motion.div id="21" className="p-space5 flex flex-col justify-around items-end"
+                <motion.div id="21" className="flex flex-col justify-around items-end"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 5, delay: 0.75, ease: "easeInOut" }}
@@ -82,15 +82,15 @@ export default function Home() {
                     <div className="text-end">We perform state-of-the-art research leading to feasibility studies and rapid software prototype design and development.</div>
                 </motion.div>
 
-                <div id="22" className="p-space5 flex flex-col justify-center items-start">
+                <div id="22" className="flex flex-col justify-center items-start">
                     <CoveredImageFlexible customStyle="max-h-[100%] bg-color0" imagePath="/images/rnd.png" />
                 </div>
 
-                <div id="31" className="p-space5 flex flex-col justify-center items-end">
+                <div id="31" className="flex flex-col justify-center items-end">
                     <CoveredImageFlexible customStyle="max-h-[100%] w-[auto] bg-white" imagePath="/images/outsorcing.png" />
                 </div>
 
-                <motion.div id="32" className="p-space5 flex flex-col justify-around items-start"
+                <motion.div id="32" className="flex flex-col justify-around items-start"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 5, delay: 0.75, ease: "easeInOut" }}

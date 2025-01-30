@@ -14,7 +14,7 @@ export default function Components1() {
     }
 
     return (
-        <div className="px-space5 pt-space9 pb-space5 w-full min-h-screen flex flex-row flex-wrap justify-start items-start gap-space5 bg-color10 text-color1">
+        <div className="px-space5 sm:px-space22 pt-[calc(var(--navheight)+var(--space5))] sm:pt-[calc(var(--navheight)+var(--space22))] pb-space5 sm:pb-space22 w-full min-h-screen flex flex-row flex-wrap justify-start items-start gap-space5 sm:gap-space22 bg-color10 text-color1">
             <ProgressBarCircular></ProgressBarCircular>
 
             <CoveredImageFlexible customStyle="min-w-[100px] min-h-[100px] w-[200px] h-[200px] bg-white" imagePath="/images/consulting.png"></CoveredImageFlexible>
