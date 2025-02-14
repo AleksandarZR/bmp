@@ -38,9 +38,9 @@ export default function Home() {
     }, [count, activeLogo]);
 
     return (
-        <main className="pt-[calc(var(--navheight)+var(--space5))] px-space5 pb-space5 min-w-screen min-h-screen flex flex-col justify-start items-center sm:items-start bg-color1-transparent overflow-x-hidden">
+        <main className="pt-[calc(var(--navheight)+var(--space5))] sm:pt-[calc(var(--navheight)+var(--space22))] px-space5 pb-space5 min-w-screen min-h-screen flex flex-col justify-start items-center sm:items-start bg-color10 overflow-x-hidden">
             <div id="view1" className="w-screen max-w-full h-screen flex flex-col justify-around items-center overflow-x-hidden">
-                <motion.div id="imageContainer" className="lg:h-[auto] md:h-[70%] w-[auto] bg-color1">
+                <motion.div id="imageContainer" className="lg:h-[auto]  w-[auto] bg-color1 shadow-[8px_8px_8px_8px_rgba(0,0,0,0.2)]">
                     <Image
                         src={activeLogo}
                         width={300}
@@ -68,7 +68,7 @@ export default function Home() {
                     transition={{ duration: 5, delay: 0.75, ease: "easeInOut" }}
                     viewport={{ once: false }}
                 >
-                    <h1 className="text-3xl text-color8">Consulting</h1>
+                    <h1 className="text-3xl text-color8 font-bold">Consulting</h1>
                     <div className="pt-space3">We offer strategic architecting and consulting, as well as innovation workshops. We provide technical leadership and help to determine bounds of what’s currently technically possible.</div>
                 </motion.div>
 
@@ -78,7 +78,7 @@ export default function Home() {
                     transition={{ duration: 5, delay: 0.75, ease: "easeInOut" }}
                     viewport={{ once: false }}
                 >
-                    <h1 className="text-3xl text-color8">Research & Development</h1>
+                    <h1 className="text-3xl text-color8 font-bold">Research & Development</h1>
                     <div className="text-end">We perform state-of-the-art research leading to feasibility studies and rapid software prototype design and development.</div>
                 </motion.div>
 
@@ -95,7 +95,7 @@ export default function Home() {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 5, delay: 0.75, ease: "easeInOut" }}
                     viewport={{ once: false }}>
-                    <h1 className="text-3xl text-color8">Outsourcing</h1>
+                    <h1 className="text-3xl text-color8 font-bold">Outsourcing</h1>
                     <div>We build custom software solutions using blockchain, machine learning, and AR/VR and integrate them with client's existing IT systems.</div>
                 </motion.div>
             </div>
