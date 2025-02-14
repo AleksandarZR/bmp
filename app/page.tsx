@@ -40,7 +40,7 @@ export default function Home() {
     return (
         <main className="pt-[calc(var(--navheight)+var(--space5))] sm:pt-[calc(var(--navheight)+var(--space22))] px-space5 pb-space5 min-w-screen min-h-screen flex flex-col justify-start items-center sm:items-start bg-color10 overflow-x-hidden">
             <div id="view1" className="w-screen max-w-full h-screen flex flex-col justify-around items-center overflow-x-hidden">
-                <motion.div id="imageContainer" className="lg:h-[auto]  w-[auto] bg-color1 shadow-[8px_8px_8px_8px_rgba(0,0,0,0.2)]">
+                <motion.div id="imageContainer" className="lg:h-[auto] w-[auto] bg-color1 shadow-[8px_8px_8px_8px_rgba(0,0,0,0.2)] px-space5 py-space5 flex flex-col items-center justify-center rounded-xl">
                     <Image
                         src={activeLogo}
                         width={300}
