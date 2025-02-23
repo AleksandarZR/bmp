@@ -43,18 +43,18 @@ export default function Home() {
             <video
                 id="video"
                 className="fixed w-full h-full object-cover"
-                src="/videos/circuits.mp4"
+                src="/videos/circuits42.mp4"
                 autoPlay
                 muted
                 loop
             ></video>
 
-            <main className="pt-[calc(var(--navheight)+var(--space5))] sm:pt-[calc(var(--navheight)+var(--space22))] px-space5 pb-space5 min-w-screen min-h-screen flex flex-col justify-start items-center sm:items-start bg-color0-transparent overflow-x-hidden z-20">
+            <main className="w-screen max-w-full min-h-screen flex flex-col justify-start items-center overflow-x-hidden z-20">
                 <div
                     id="view1"
-                    className="w-screen max-w-full h-screen flex flex-col justify-around items-center overflow-x-hidden z-20"
+                    className="pt-[calc(var(--navheight)+var(--space5))] sm:pt-[calc(var(--navheight)+var(--space22))] px-space5 pb-space5 min-w-screen min-h-screen flex flex-col justify-between items-center sm:items-start overflow-x-hidden z-20"
                 >
-                    <motion.div
+                    {/* <motion.div
                         id="imageContainer"
                         className="fixed lg:h-[50%] w-[auto] bg-color1 shadow-[8px_8px_8px_8px_rgba(0,0,0,0.2)] mt-[-210px] px-space5 py-space5 flex flex-col items-center justify-center rounded-xl"
                     >
@@ -65,10 +65,16 @@ export default function Home() {
                             className="h-full w-full"
                             alt="Logo"
                         ></Image>
-                    </motion.div>
+                    </motion.div> */}
 
-                    <div className="w-full lg:h-[30%] md:h-[30%] flex flex-col justify-center items-center text-2xl text-color0 text-center z-20">
-                        <div className="text-color7 drop-shadow-md bg-black">
+                    <div className="w-full flex flex-col justify-center items-center text-5xl text-color0 text-center z-20">
+                        <div className="text-color7 bg-black">
+                            Moderately Awesome Developers
+                        </div>
+                    </div>
+
+                    <div className="w-full flex flex-col justify-center items-center text-2xl text-color0 text-center z-20">
+                        <div className="text-color7 drop-shadow-md bg-color1">
                             <span className="text-color8">42computing</span> is
                             a deep tech research and development company.
                         </div>
@@ -114,7 +120,7 @@ export default function Home() {
                         <h1 className="text-3xl text-color8 font-bold bg-black">
                             Consulting
                         </h1>
-                        <div  className={styles.textWithBorder}>
+                        <div className={styles.textWithBorder}>
                             We offer strategic architecting and consulting, as
                             well as innovation workshops. We provide technical
                             leadership and help to determine bounds of what’s
@@ -137,7 +143,7 @@ export default function Home() {
                         <h1 className="text-3xl text-color8 font-bold">
                             Research & Development
                         </h1>
-                        <div  className={styles.textWithBorder}>
+                        <div className={styles.textWithBorder}>
                             We perform state-of-the-art research leading to
                             feasibility studies and rapid software prototype
                             design and development.
