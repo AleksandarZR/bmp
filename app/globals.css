@@ -7,7 +7,7 @@
     --foreground: #ffffff;
 
     --color0: rgb(255, 255, 255);
-    --color0-transparent: rgba(255, 255, 255, 0.5);
+    --color0-transparent: rgba(255, 255, 255, 0.99);
     --color1: rgb(0, 0, 0);
     --color1-transparent: rgba(0, 0, 0, 0.9);
     --color2: rgb(32, 32, 32);

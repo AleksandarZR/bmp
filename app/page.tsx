@@ -7,7 +7,7 @@ import consulting from "@/public/images/consulting.png";
 import rnd from "@/public/images/rnd.png";
 import outsorcing from "@/public/images/outsorcing.png";
 import { motion } from "framer-motion";
-import CoveredImageFlexible from "./components/common/CoveredImageFlexible";
+import CoveredImageFlexible from "@/app/components/common/CoveredImageFlexible";
 import { useEffect, useState } from "react";
 
 export default function Home() {
