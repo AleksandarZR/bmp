@@ -19,10 +19,10 @@ export default function Parallax3() {
         <div id="page" className="w-full h-full bg-color0-transparent text-color1">
             <motion.div
                 id="thor"
-                className="fixed w-full h-full z-[1] flex flex-col justify-center items-center pointer-events-none"
+                className="fixed w-full h-full z-[45] flex flex-col justify-center items-center pointer-events-none"
                 style={{ translateY: y, scale: scaleThor }}
             >
-                <img className="fixed top-[25%] left-[10%] w-[75%] h-[auto] z-[5] pointer-events-none" src="/images/thor2.png" />
+                <img className="fixed top-[25%] left-[10%] w-[75%] h-[auto] z-[50] pointer-events-none" src="/images/thor2.png" />
             </motion.div>
 
             <video id="video" className="w-full h-[70vh] object-cover"

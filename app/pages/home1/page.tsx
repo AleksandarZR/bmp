@@ -1,19 +1,9 @@
 "use client";
-import Image from "next/image";
-import logo from "@/public/images/logo21.png";
-import logo3 from "@/public/images/logo22.png";
-import logo2 from "@/public/images/logo23.png";
-import consulting from "@/public/images/consulting.png";
-import rnd from "@/public/images/rnd.png";
-import outsorcing from "@/public/images/outsorcing.png";
-import { motion } from "framer-motion";
-import CoveredImageFlexible from "@/app/components/common/CoveredImageFlexible";
-import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 
-export default function Home() {
+export default function Home1() {
     return (
-        <>
+        <div>
             <video
                 id="video"
                 className="fixed w-full h-full object-cover"
@@ -27,7 +17,7 @@ export default function Home() {
                 id="view1"
                 className="pt-[calc(var(--navheight)+var(--space5))] sm:pt-[calc(var(--navheight)+var(--space22))] px-space5 sm:px-space2 pb-space5 min-w-screen min-h-screen flex flex-col justify-between items-center sm:items-start overflow-x-hidden"
             >
-                <div className="w-full flex flex-col justify-center items-center text-5xl sm:text-4xl text-color7 text-center z-20">
+                <div className="w-full flex flex-col justify-center items-center text-5xl sm:text-4xl text-color7 text-center z-10">
                     <div className={styles.textWithBorder}>
                         Moderately Awesome Developers
                     </div>
@@ -49,6 +39,6 @@ export default function Home() {
                     </div>
                 </div>
             </main>
-        </>
+        </div>
     );
 }

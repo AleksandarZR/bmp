@@ -13,7 +13,7 @@ const Navigation = ({ session }: any): JSX.Element => {
     return (
         <>
             {/* Desktop Navigation */}
-            <div className="md:hidden sm:hidden flex flex-row justify-between items-center w-full h-navheight fixed top-0 left-0 z-100 pt-4 pb-4 px-space5 bg-color1-transparent border-b-2">
+            <div className="md:hidden sm:hidden flex flex-row justify-between items-center w-full h-navheight fixed top-0 left-0 z-40 pt-4 pb-4 px-space5 bg-color1-transparent border-b-2">
                 <div>
                     <LogoDesktop session={session} />
                 </div>
