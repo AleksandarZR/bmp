@@ -7,7 +7,7 @@
     --foreground: #ffffff;
 
     --color0: rgb(255, 255, 255);
-    --color0-transparent: rgba(255, 255, 255, 0.99);
+    --color0-transparent: rgba(255, 255, 255, 0.95);
     --color1: rgb(0, 0, 0);
     --color1-transparent: rgba(0, 0, 0, 0.9);
     --color2: rgb(32, 32, 32);
@@ -25,6 +25,7 @@
     --color10: rgb(43, 76, 93);
     --color11: rgb(4, 207, 52);
     --color12: rgb(29, 31, 30);
+    --color15: rgb(0, 14, 27);
 
     --navheight: 80px;
 
