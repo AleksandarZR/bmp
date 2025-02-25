@@ -48,12 +48,12 @@ export default function Home() {
                 loop
             ></video>
 
-            <main className="relative px-space5 sm:px-space22 max-w-[60%] sm:max-w-[85%] min-h-screen justify-self-center flex flex-col justify-start items-center sm:items-start bg-color0-transparent overflow-x-hidden">
+            <main className="relative px-space5 sm:px-space22 max-w-[60%] md:max-w-[80%] sm:max-w-[85%] min-h-screen justify-self-center flex flex-col justify-start items-center sm:items-start bg-color0-transparent overflow-x-hidden">
                 <div
                     id="view1"
-                    className="pt-[calc(var(--navheight)+var(--space5))] sm:pt-[calc(var(--navheight)+var(--space22))] pb-space5 sm:pb-space22 w-screen max-w-full h-screen flex flex-col justify-between items-center overflow-x-hidden"
+                    className="sm:hidden pt-[calc(var(--navheight)+var(--space5))] pb-space5 w-screen max-w-full min-h-screen flex flex-col justify-between items-center overflow-x-hidden"
                 >
-                    <div className="w-full flex flex-col justify-center items-center text-5xl sm:text-4xl text-color1 text-center font-extrabold">
+                    <div className="pb-space5 w-full flex flex-col justify-center items-center text-5xl sm:text-4xl text-color1 text-center font-extrabold">
                         <div className="">Moderately Awesome Developers</div>
                     </div>
 
@@ -63,24 +63,26 @@ export default function Home() {
                     >
                         <Image
                             src={activeLogo}
-                            width={300}
-                            height={300}
+                            width={250}
+                            height={250}
                             alt="Picture of the author"
                         ></Image>
                     </motion.div>
 
                     <div className="w-full flex flex-col justify-center items-center text-2xl text-color0 text-center">
-                        <div className="text-color1">
-                            <span className="text-color8 font-extrabold">42computing</span> is
-                            a deep tech research and development company.
+                        <div className="pt-space5 text-color1">
+                            <span className="text-color8 font-extrabold">
+                                42computing
+                            </span>{" "}
+                            is a deep tech research and development company.
                         </div>
-                        <div className="text-color1">
+                        <div className="pt-space5 text-color1">
                             Our vision is to build superior solutions for
                             real-world problems using blockchain, distributed
                             systems, artificial intelligence, computer vision,
                             and AR/VR.
                         </div>
-                        <div className="text-color1">
+                        <div className="pt-space5 text-color1">
                             We use cutting-edge knowledge to help organizations
                             augment and transform their business processes.
                         </div>
@@ -89,7 +91,7 @@ export default function Home() {
 
                 <div
                     id="view2"
-                    className="pt-[calc(var(--navheight)+var(--space5))] sm:pt-[calc(var(--navheight)+var(--space22))] pb-space5 sm:pb-space22 w-screen max-w-full h-screen grid grid-rows-3 sm:grid-rows-6 grid-cols-2 sm:grid-cols-1 gap-space5 sm:gap-space22 text-color1 text-2xl sm:text-xl"
+                    className="sm:hidden pt-[calc(var(--navheight)+var(--space5))] pb-space5 w-screen max-w-full lg:h-screen grid grid-rows-3 grid-cols-2 gap-space5 text-color1 text-2xl"
                 >
                     <div
                         id="11"
@@ -187,6 +189,143 @@ export default function Home() {
                             client's existing IT systems.
                         </div>
                     </motion.div>
+                </div>
+
+                <div
+                    id="viewSmallScreen"
+                    className="lg:hidden md:hidden pt-[calc(var(--navheight)+var(--space22))] pb-space22 w-screen max-w-full min-h-screen flex flex-col justify-start items-center overflow-x-hidden text-color1"
+                >
+                    <div className="pb-space22 w-full flex flex-col justify-center items-center text-3xl text-color1 text-center font-extrabold">
+                        <div className="">Moderately Awesome Developers</div>
+                    </div>
+
+                    <motion.div
+                        id="imageContainer"
+                        className="h-[auto] w-[auto] bg-color1 shadow-[8px_8px_8px_8px_rgba(0,0,0,0.2)] px-space22 py-space22 flex flex-col items-center justify-center rounded-xl"
+                    >
+                        <Image
+                            src={activeLogo}
+                            width={250}
+                            height={250}
+                            alt="Picture of the author"
+                        ></Image>
+                    </motion.div>
+
+                    <div className="w-full flex flex-col justify-center items-center text-lg text-color0 text-center">
+                        <div className="pt-space22 text-color1">
+                            <span className="text-color8 font-extrabold">
+                                42computing
+                            </span>{" "}
+                            is a deep tech research and development company.
+                        </div>
+                        <div className="pt-space22 text-color1">
+                            Our vision is to build superior solutions for
+                            real-world problems using blockchain, distributed
+                            systems, artificial intelligence, computer vision,
+                            and AR/VR.
+                        </div>
+                        <div className="pt-space22 text-color1">
+                            We use cutting-edge knowledge to help organizations
+                            augment and transform their business processes.
+                        </div>
+                    </div>
+
+                    <motion.div
+                        id="1"
+                        className="pt-space22 flex flex-col justify-around items-start"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{
+                            duration: 5,
+                            delay: 0.75,
+                            ease: "easeInOut",
+                        }}
+                        viewport={{ once: false }}
+                    >
+                        <h1 className="self-center text-3xl text-color8 font-bold">
+                            Consulting
+                        </h1>
+                        <div className="pt-space22 text-lg text-center">
+                            We offer strategic architecting and consulting, as
+                            well as innovation workshops. We provide technical
+                            leadership and help to determine bounds of what’s
+                            currently technically possible.
+                        </div>
+                    </motion.div>
+
+                    <div
+                        id="2"
+                        className="pt-space22 flex flex-col justify-center items-center"
+                    >
+                        <CoveredImageFlexible
+                            customStyle="max-h-[100%] max-w-[50%]"
+                            imagePath="/images/consulting.png"
+                        />
+                    </div>
+
+                    <motion.div
+                        id="3"
+                        className="pt-space22 flex flex-col justify-around items-start"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{
+                            duration: 5,
+                            delay: 0.75,
+                            ease: "easeInOut",
+                        }}
+                        viewport={{ once: false }}
+                    >
+                        <h1 className="pt-space22 self-center text-3xl text-color8 font-bold text-center">
+                            Research & Development
+                        </h1>
+                        <div className="pt-space22 text-center text-lg">
+                            We perform state-of-the-art research leading to
+                            feasibility studies and rapid software prototype
+                            design and development.
+                        </div>
+                    </motion.div>
+
+                    <div
+                        id="4"
+                        className="pt-space22 flex flex-col justify-center items-center"
+                    >
+                        <CoveredImageFlexible
+                            customStyle="max-h-[100%] max-w-[50%]"
+                            imagePath="/images/rnd.png"
+                        />
+                    </div>
+
+                    <motion.div
+                        id="5"
+                        className="pt-space22 flex flex-col justify-around items-start"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{
+                            duration: 5,
+                            delay: 0.75,
+                            ease: "easeInOut",
+                        }}
+                        viewport={{ once: false }}
+                    >
+                        <h1 className="pt-space22 self-center text-3xl text-color8 font-bold text-center">
+                            Outsourcing
+                        </h1>
+                        <div className="pt-space22 text-center text-lg">
+                            We build custom software solutions using blockchain,
+                            machine learning, and AR/VR and integrate them with
+                            client's existing IT systems.
+                        </div>
+                    </motion.div>
+
+                    <div
+                        id="6"
+                        className="pt-space22 flex flex-col justify-center items-center"
+                    >
+                        <CoveredImageFlexible
+                            customStyle="max-h-[100%] max-w-[50%]"
+                            imagePath="/images/outsorcing.png"
+                        />
+                    </div>
                 </div>
             </main>
         </>
