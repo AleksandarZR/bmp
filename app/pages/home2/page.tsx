@@ -1,4 +1,5 @@
 "use client";
+import styles from "./page.module.css";
 import Image from "next/image";
 import logo from "@/public/images/logo21.png";
 import logo3 from "@/public/images/logo22.png";
@@ -53,8 +54,8 @@ export default function Home() {
                     id="view1"
                     className="sm:hidden pt-[calc(var(--navheight)+var(--space5))] pb-space5 w-screen max-w-full min-h-screen flex flex-col justify-between items-center overflow-x-hidden"
                 >
-                    <div className="pb-space5 w-full flex flex-col justify-center items-center text-5xl sm:text-4xl text-color1 text-center font-extrabold">
-                        <div className="">Moderately Awesome Developers</div>
+                    <div className="pb-space5 w-full flex flex-col justify-center items-center text-5xl sm:text-4xl text-color7 text-center font-extrabold">
+                        <div className={styles.textWithBorder}>Moderately Awesome Developers</div>
                     </div>
 
                     <motion.div
@@ -195,8 +196,8 @@ export default function Home() {
                     id="viewSmallScreen"
                     className="lg:hidden md:hidden pt-[calc(var(--navheight)+var(--space22))] pb-space22 w-screen max-w-full min-h-screen flex flex-col justify-start items-center overflow-x-hidden text-color1"
                 >
-                    <div className="pb-space22 w-full flex flex-col justify-center items-center text-3xl text-color1 text-center font-extrabold">
-                        <div className="">Moderately Awesome Developers</div>
+                    <div className="pb-space22 w-full flex flex-col justify-center items-center text-3xl text-color7 text-center font-extrabold">
+                        <div className={styles.textWithBorder}>Moderately Awesome Developers</div>
                     </div>
 
                     <motion.div
