@@ -66,7 +66,7 @@ export default function Home() {
                             src={activeLogo}
                             width={250}
                             height={250}
-                            alt="Picture of the author"
+                            alt="Logo"
                         ></Image>
                     </motion.div>
 
@@ -100,7 +100,7 @@ export default function Home() {
                     >
                         <CoveredImageFlexible
                             customStyle="max-h-[100%]"
-                            imagePath="/images/consulting.png"
+                            imagePath="/images/consulting2.jpg"
                         />
                     </div>
 
@@ -155,7 +155,7 @@ export default function Home() {
                     >
                         <CoveredImageFlexible
                             customStyle="max-h-[100%]"
-                            imagePath="/images/rnd.png"
+                            imagePath="/images/rnd2.jpg"
                         />
                     </div>
 
@@ -165,7 +165,7 @@ export default function Home() {
                     >
                         <CoveredImageFlexible
                             customStyle="max-h-[100%] w-[auto]"
-                            imagePath="/images/outsorcing.png"
+                            imagePath="/images/outsorcing2.jpg"
                         />
                     </div>
 
@@ -208,7 +208,7 @@ export default function Home() {
                             src={activeLogo}
                             width={250}
                             height={250}
-                            alt="Picture of the author"
+                            alt="Logo"
                         ></Image>
                     </motion.div>
 
@@ -260,7 +260,7 @@ export default function Home() {
                     >
                         <CoveredImageFlexible
                             customStyle="max-h-[100%] max-w-[50%]"
-                            imagePath="/images/consulting.png"
+                            imagePath="/images/consulting2.jpg"
                         />
                     </div>
 
@@ -292,7 +292,7 @@ export default function Home() {
                     >
                         <CoveredImageFlexible
                             customStyle="max-h-[100%] max-w-[50%]"
-                            imagePath="/images/rnd.png"
+                            imagePath="/images/rnd2.jpg"
                         />
                     </div>
 
@@ -324,7 +324,7 @@ export default function Home() {
                     >
                         <CoveredImageFlexible
                             customStyle="max-h-[100%] max-w-[50%]"
-                            imagePath="/images/outsorcing.png"
+                            imagePath="/images/outsorcing2.jpg"
                         />
                     </div>
                 </div>

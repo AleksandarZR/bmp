@@ -36,7 +36,7 @@ export default function Parallax3() {
                 <h1 id="headline" className="px-[1rem] text-color0 text-center text-[10vw] font-serif font-extrabold overflow-hidden overflow-y-hidden drop-shadow-[3px_3px_10px_rgb(255,0,0)]">Thor</h1>
             </div>
 
-            <div id="overflow" className="px-space10 sm:px-space22 pb-space10 w-full max-w-full bg-color1 text-color0 overflow-x-hidden text-center">
+            <div id="overflow" className="px-space5 sm:px-space22 pb-space10 w-full max-w-full bg-color1 text-color0 overflow-x-hidden text-center">
                 <motion.p id="text1" className="mt-space8 mb-0 leading-10 text-justify text-2xl"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
