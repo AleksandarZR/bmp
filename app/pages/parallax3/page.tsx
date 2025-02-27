@@ -22,7 +22,8 @@ export default function Parallax3() {
                 className="fixed w-full h-full z-[45] flex flex-col justify-center items-center pointer-events-none"
                 style={{ translateY: y, scale: scaleThor }}
             >
-                <img className="fixed top-[25%] left-[10%] w-[75%] h-[auto] z-[50] pointer-events-none" src="/images/thor2.png" />
+                <img className="md:hidden sm:hidden fixed top-[25%] left-[10%] sm:left-[0%] w-[75%] sm:w-[200%] h-[auto] z-[50] pointer-events-none" src="/images/thor2.png" />
+                <img className="lg:hidden fixed top-[10%] left-[10%] sm:left-[0%] w-[75%] sm:w-[200%] h-[auto] z-[50] pointer-events-none" src="/images/thor.png" />
             </motion.div>
 
             <video id="video" className="w-full h-[70vh] object-cover"
@@ -35,7 +36,7 @@ export default function Parallax3() {
                 <h1 id="headline" className="px-[1rem] text-color0 text-center text-[10vw] font-serif font-extrabold overflow-hidden overflow-y-hidden drop-shadow-[3px_3px_10px_rgb(255,0,0)]">Thor</h1>
             </div>
 
-            <div id="overflow" className="px-space10 pb-space10 w-full max-w-full bg-color1 text-color0 overflow-x-hidden text-center">
+            <div id="overflow" className="px-space10 sm:px-space22 pb-space10 w-full max-w-full bg-color1 text-color0 overflow-x-hidden text-center">
                 <motion.p id="text1" className="mt-space8 mb-0 leading-10 text-justify text-2xl"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
