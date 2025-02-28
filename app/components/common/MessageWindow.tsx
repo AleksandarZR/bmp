@@ -8,7 +8,7 @@ export enum MessageType {
 
 // Define a Record mapping for text colors based on MessageType
 const textColorMap: Record<MessageType, string> = {
-    [MessageType.INFO]: "text-primary-color",
+    [MessageType.INFO]: "text-yellow-500",
     [MessageType.ERROR]: "text-red-500",
 };
 
@@ -35,7 +35,7 @@ const MessageWindow: React.FC<MessageWindowProps> = ({
 
     return isVisible ? (
         <div className="fixed inset-0 flex items-center justify-center z-45">
-            <div className="border-4 border-secondary-color p-4 bg-tertiary-color rounded shadow-lg max-w-md m-auto text-center">
+            <div className="border-4 border-blue-500 p-4 min-w-[300px] min-h-[200px] bg-green-500 rounded shadow-lg max-w-md m-auto text-center flex flex-col justify-between items-center">
                 <h2 className={`text-lg ${getTextColor()} font-bold`}>
                     {MessageType.INFO.toUpperCase()}{" "}
                     {/* Use the localized message */}
@@ -44,7 +44,7 @@ const MessageWindow: React.FC<MessageWindowProps> = ({
                 <div className="flex justify-center">
                     <button
                         onClick={handleClose}
-                        className="bg-button-background-color text-button-text-color pt-1 pb-1 w-28 max-w-28 min-w-28 rounded-lg font-bold text-center"
+                        className="bg-pink-200 text-button-text-color pt-1 pb-1 w-28 max-w-28 min-w-28 rounded-lg font-bold text-center"
                     >
                         OK
                     </button>

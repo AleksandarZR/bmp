@@ -139,7 +139,7 @@ export default function Home() {
                         }}
                         viewport={{ once: false }}
                     >
-                        <h1 className="text-3xl text-color8 font-bold">
+                        <h1 className="text-3xl text-color8 font-bold text-end">
                             Research & Development
                         </h1>
                         <div className="text-end">
