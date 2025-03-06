@@ -4,7 +4,7 @@ import { JSX } from "react";
 interface Properties {
     text: string;
     handler: any;
-    state: ButtonState;
+    state?: ButtonState;
     customStyle?: string;
 }
 

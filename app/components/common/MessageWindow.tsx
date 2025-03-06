@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import ButtonClick from "./ButtonClick";
 
 export enum MessageType {
     INFO = "info",
@@ -8,8 +9,8 @@ export enum MessageType {
 
 // Define a Record mapping for text colors based on MessageType
 const textColorMap: Record<MessageType, string> = {
-    [MessageType.INFO]: "text-yellow-500",
-    [MessageType.ERROR]: "text-red-500",
+    [MessageType.INFO]: "text-color6",
+    [MessageType.ERROR]: "text-color8",
 };
 
 interface MessageWindowProps {
@@ -35,19 +36,16 @@ const MessageWindow: React.FC<MessageWindowProps> = ({
 
     return isVisible ? (
         <div className="fixed inset-0 flex items-center justify-center z-45">
-            <div className="border-4 border-blue-500 p-4 min-w-[300px] min-h-[200px] bg-green-500 rounded shadow-lg max-w-md m-auto text-center flex flex-col justify-between items-center">
-                <h2 className={`text-lg ${getTextColor()} font-bold`}>
-                    {MessageType.INFO.toUpperCase()}{" "}
-                    {/* Use the localized message */}
+            <div className="border-4 border-color1 min-w-[300px] min-h-[200px] bg-color0 rounded shadow-lg max-w-md m-auto text-center flex flex-col justify-between items-center">
+                <h2 className={`min-w-[100%] text-lg ${getTextColor()} font-bold bg-color1`}>
+                    {messageType.toUpperCase()}{" "}
                 </h2>
-                <p className="text-gray-700 mb-4">{messageContent}</p>
-                <div className="flex justify-center">
-                    <button
-                        onClick={handleClose}
-                        className="bg-pink-200 text-button-text-color pt-1 pb-1 w-28 max-w-28 min-w-28 rounded-lg font-bold text-center"
-                    >
-                        OK
-                    </button>
+                <p className="px-space22 py-space22 text-gray-700">{messageContent}</p>
+                <div className="flex justify-center pb-space2 sm:pb-space22">
+                    <ButtonClick
+                        text="OK"
+                        handler={handleClose}
+                    />
                 </div>
             </div>
         </div>

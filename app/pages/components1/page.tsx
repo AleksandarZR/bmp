@@ -11,16 +11,23 @@ import MessageWindow, {
 import { useState } from "react";
 
 export default function Components1() {
-    const [messageWindowVisible, setMessageWindowVisible] = useState(false);
+    const [infoWindowVisible, setInfoWindowVisible] = useState(false);
+    const [errorWindowVisible, setErrorWindowVisible] = useState(false);
 
-    const buttonClick = () => {
-        //alert("Button clicked");
-        setMessageWindowVisible(true);
+    const buttonInfoClick = () => {
+        setInfoWindowVisible(true);
     };
 
-    const onClosingMessageWindow = () => {
-        console.log("Closing...");
-        setMessageWindowVisible(false);
+    const buttonErrorClick = () => {
+        setErrorWindowVisible(true);
+    };
+
+    const onClosingInfoWindow = () => {
+        setInfoWindowVisible(false);
+    };
+
+    const onClosingErrorWindow = () => {
+        setErrorWindowVisible(false);
     };
 
     return (
@@ -42,17 +49,32 @@ export default function Components1() {
             <ButtonLink text="Home" link="/"></ButtonLink>
 
             <ButtonClick
-                text="Click me"
-                handler={buttonClick}
+                text="Show Info"
+                handler={buttonInfoClick}
                 state={ButtonState.ENABLED}
                 customStyle="bg-white"
             />
 
-            {messageWindowVisible && (
+            {infoWindowVisible && (
                 <MessageWindow
                     messageType={MessageType.INFO}
-                    messageContent="aaaaaaaa"
-                    onClose={onClosingMessageWindow}
+                    messageContent="This is a message of the custom message window."
+                    onClose={onClosingInfoWindow}
+                ></MessageWindow>
+            )}
+
+            <ButtonClick
+                text="Show Error"
+                handler={buttonErrorClick}
+                state={ButtonState.ENABLED}
+                customStyle="bg-white"
+            />
+
+            {errorWindowVisible && (
+                <MessageWindow
+                    messageType={MessageType.ERROR}
+                    messageContent="This is a message of the custom message window."
+                    onClose={onClosingErrorWindow}
                 ></MessageWindow>
             )}
         </div>
