@@ -1,0 +1,3 @@
+Convert svg to react at this link:
+
+https://react-svgr.com/playground/

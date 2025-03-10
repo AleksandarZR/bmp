@@ -2,6 +2,9 @@ import React, { JSX } from "react";
 import MenuItemWithSubMenu from "./MenuItemWithSubMenu";
 import MenuItemLink from "./MenuItemLink";
 import SubMenuItemLink from "./SubMenuItemLink";
+import MenuItemLinkWithIcon from "./MenuItemLinkWithIcon";
+import settingsIcon from "@/public/svg/settings.svg";
+// import settingsIcon from "@/app/components/common/SvgComponent";
 
 const MenuItems = (): JSX.Element => {
     return (
@@ -19,6 +22,7 @@ const MenuItems = (): JSX.Element => {
             </MenuItemWithSubMenu>
 
             <MenuItemLink href={"/pages/settings"} label={"Settings"} />
+            {/* <MenuItemLinkWithIcon href={"/pages/aaahor"} label={"Panel"} iconPath={settingsIcon}></MenuItemLinkWithIcon> */}
         </div>
     );
 };

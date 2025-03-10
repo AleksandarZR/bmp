@@ -27,7 +27,17 @@
     --color12: rgb(29, 31, 30);
     --color15: rgb(0, 14, 27);
 
+    --color20: rgb(255, 255, 255);
+    --color20-transparent: rgba(255, 255, 255, 0.95);
+    --color21: rgb(240, 241, 243);
+    --color21-transparent: rgba(240, 241, 243, 0.9);
+    --color22: rgb(0, 0, 0);
+    --color22-transparent: rgba(0, 0, 0, 0.75);
+    --color23: rgb(22, 170, 174);
+    --color23-transparent: rgba(22, 170, 174, 0);
+
     --navheight: 80px;
+    --navwidth: 240px;
 
     --space1: 8px;
     --space2: 16px;

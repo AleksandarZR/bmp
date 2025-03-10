@@ -36,9 +36,18 @@ const config: Config = {
                 "color11": "var(--color11)",
                 "color12": "var(--color12)",
                 "color15": "var(--color15)",
+                "color20": "var(--color20)",
+                "color20-transparent": "var(--color20-transparent)",
+                "color21": "var(--color21)",
+                "color21-transparent": "var(--color21-transparent)",
+                "color22": "var(--color22)",
+                "color22-transparent": "var(--color22-transparent)",
+                "color23": "var(--color23)",
+                "color23-transparent": "var(--color23-transparent)",
             },
             spacing: {
                 navheight: "var(--navheight)",
+                navwidth: "var(--navwidth)",
                 top1: "var(--top1)",
 
                 space1: "var(--space1)",
