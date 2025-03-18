@@ -1,4 +1,38 @@
+"use client";
+
+import React, { useState, useEffect, useRef } from "react";
+import ReactDOM from "react-dom";
+import {
+    useViewportScroll,
+    motion,
+    useTransform,
+    useMotionValue,
+} from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+import styles from "./page.module.css";
+
 export default function Parallax6() {
+    const { scrollY } = useViewportScroll();
+    const y1 = useTransform(scrollY, [0, 300], [0, 200]);
+    const y2 = useTransform(scrollY, [0, 300], [0, -100]);
+
+    const [ref, inView, entry] = useInView({
+        /* Optional options */
+        threshold: 0.5,
+        triggerOnce: false,
+    });
+
+    console.log(entry);
+
+    const variants = {
+        visible: { opacity: 1, scale: 1, y: 0 },
+        hidden: {
+            opacity: 0,
+            scale: 0.65,
+            y: 50,
+        },
+    };
     return (
         <>
             <div
@@ -76,9 +110,29 @@ export default function Parallax6() {
                 </div>
             </div>
 
+            <motion.div
+                className={styles.box}
+                style={{ y: y1, x: -50, width: 100, height: 100 }}
+            />
+
+            <motion.div
+                className={styles.box}
+                style={{ y: y2, x: 50, background: "salmon" }}
+            />
+
+            <div style={{ height: 800 }} />
+
+            <motion.div
+                animate={inView ? "visible" : "hidden"}
+                variants={variants}
+                transition={{ duration: 2, ease: "easeOut" }}
+                ref={ref}
+                className={styles.magic}
+            />
+
             <div
                 id="layer-99"
-                className="bg-top-center bg-cover bg-no-repeat bg-[url('/images/spaceLayer99.jpg')] bg-fixed absolute top-0 right-0 bottom-0 left-0"
+                className="bg-top-center bg-cover bg-no-repeat bg-[url('/images/spaceLayer99.jpg')] bg-fixed absolute top-0 right-0 bottom-0 left-0 z-10"
             ></div>
 
             {/* <div
