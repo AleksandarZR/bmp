@@ -14,8 +14,9 @@ import styles from "./page.module.css";
 
 export default function Parallax6() {
     const { scrollY } = useViewportScroll();
-    const y1 = useTransform(scrollY, [0, 300], [0, 200]);
-    const y2 = useTransform(scrollY, [0, 300], [0, -100]);
+    const y1 = useTransform(scrollY, [0, 700], [0, -500]);
+    const y2 = useTransform(scrollY, [0, 500], [0, -500]);
+    const y3 = useTransform(scrollY, [0, 500], [0, -1200]);
 
     const [ref, inView, entry] = useInView({
         /* Optional options */
@@ -37,7 +38,7 @@ export default function Parallax6() {
         <>
             <div
                 id="layer1"
-                className="bg-bottom bg-cover bg-no-repeat bg-[url('/images/spaceLayer01.png')] absolute top-0 right-0 bottom-0 left-0 z-20"
+                className="bg-bottom bg-cover bg-no-repeat bg-[url('/images/spaceLayer01.png')] absolute top-0 right-0 bottom-0 left-0 z-40"
             >
                 {/* Content sticked to first layer */}
                 <div
@@ -112,13 +113,31 @@ export default function Parallax6() {
 
             <motion.div
                 className={styles.box}
-                style={{ y: y1, x: -50, width: 100, height: 100 }}
-            />
+                style={{ y: y1, x: 50, width: 100, height: 100 }}
+            >
+                <img className="w-full h-full" src="/images/spaceLayer02.png" />
+            </motion.div>
 
             <motion.div
                 className={styles.box}
-                style={{ y: y2, x: 50, background: "salmon" }}
-            />
+                style={{ y: y2, x: 450 }}
+            >
+                <img className="w-full h-full" src="/images/spaceLayer03.png" />
+            </motion.div>
+
+            <motion.div
+                className={styles.box}
+                style={{ y: y3, x: -350 }}
+            >
+                <img className="w-full h-full" src="/images/spaceLayer04.png" />
+            </motion.div>
+
+            <motion.div
+                className={styles.box}
+                style={{ y: y3, x: 200 }}
+            >
+                <img className="w-full h-full" src="/images/spaceLayer05.png" />
+            </motion.div>
 
             <div style={{ height: 800 }} />
 
