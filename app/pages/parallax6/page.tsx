@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import ReactDOM from "react-dom";
 import {
     useViewportScroll,
+    useScroll,
     motion,
     useTransform,
     useMotionValue,
@@ -13,10 +14,27 @@ import { useInView } from "react-intersection-observer";
 import styles from "./page.module.css";
 
 export default function Parallax6() {
+    const { scrollYProgress } = useScroll();
     const { scrollY } = useViewportScroll();
     const y1 = useTransform(scrollY, [0, 700], [0, -500]);
     const y2 = useTransform(scrollY, [0, 500], [0, -500]);
     const y3 = useTransform(scrollY, [0, 500], [0, -1200]);
+    const scalePlanet1 = useTransform(
+        scrollYProgress,
+        (value: any) => 1 / (3 * value + 1)
+    );
+    const scalePlanet2 = useTransform(
+        scrollYProgress,
+        (value: any) => 1.5 / (5 * value + 1)
+    );
+    const scalePlanet3 = useTransform(
+        scrollYProgress,
+        (value: any) => 1.5 / (5 * value + 1)
+    );
+    const scalePlanet4 = useTransform(
+        scrollYProgress,
+        (value: any) => 3 / (3 * value + 1)
+    );
 
     const [ref, inView, entry] = useInView({
         /* Optional options */
@@ -34,6 +52,7 @@ export default function Parallax6() {
             y: 50,
         },
     };
+
     return (
         <>
             <div
@@ -113,28 +132,29 @@ export default function Parallax6() {
 
             <motion.div
                 className={styles.box}
-                style={{ y: y1, x: -350, marginTop: 150, width: 100, height: 100 }}
+                style={{
+                    y: y1,
+                    x: -350,
+                    marginTop: 150,
+                    width: 100,
+                    height: 100,
+                    scale: scalePlanet1,
+                }}
             >
                 <img className="w-full h-full" src="/images/spaceLayer02.png" />
             </motion.div>
 
-            <motion.div
-                className={styles.box}
-                style={{ y: y2, x: 450 }}
-            >
+            <motion.div className={styles.box} style={{ y: y2, x: 450, scale: scalePlanet3 }}>
                 <img className="w-full h-full" src="/images/spaceLayer03.png" />
             </motion.div>
 
-            <motion.div
-                className={styles.box}
-                style={{ y: y3, x: -750 }}
-            >
+            <motion.div className={styles.box} style={{ y: y3, x: -750, scale: scalePlanet3 }}>
                 <img className="w-full h-full" src="/images/spaceLayer04.png" />
             </motion.div>
 
             <motion.div
                 className={styles.box}
-                style={{ y: y3, x: 200 }}
+                style={{ y: y3, x: 200, scale: scalePlanet4 }}
             >
                 <img className="w-full h-full" src="/images/spaceLayer05.png" />
             </motion.div>
