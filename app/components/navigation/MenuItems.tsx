@@ -26,7 +26,7 @@ const MenuItems = (): JSX.Element => {
             <MenuItemLink href={"/pages/settings"} label={"Settings"} />
             {/* <MenuItemLinkWithIcon href={"/pages/aaahor"} label={"Panel"} iconPath={settingsIcon}></MenuItemLinkWithIcon> */}
 
-            <MenuItemWithSubMenu menuItemName="Home" relatedPaths={["/home/home1", "/home/home2"]}>
+            <MenuItemWithSubMenu menuItemName="Home" relatedPaths={["/pages/home1", "/pages/home2"]}>
                 <SubMenuItemLink href={"/pages/home1"} label={"Home 1"} />
                 <SubMenuItemLink href={"/pages/home2"} label={"Home 2"} />
             </MenuItemWithSubMenu>
