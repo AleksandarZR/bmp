@@ -53,11 +53,11 @@ export default function Parallax6() {
                     </div>
 
                     <div
-                        className="px-space5 sm:px-space22 w-[90%] h-auto self-center overflow-x-hidden overflow-y-hidden flex flex-col justify-start items-center text-[2rem] sm:text-[1rem]"
+                        className="px-space5 sm:px-space22 w-[100%] h-auto self-center overflow-x-hidden overflow-y-hidden flex flex-col justify-start items-center text-[2rem] sm:text-[1rem]"
                         id="info"
                     >
                         <p
-                            className="px-space8 sm:px-0 py-[3rem] max-w-full text-justify text-center overflow-x-hidden"
+                            className="py-[3rem] max-w-full text-justify text-center overflow-x-hidden"
                             id="text1"
                         >
                             Venom is a character appearing in American comic
@@ -73,7 +73,7 @@ export default function Parallax6() {
                         </p>
 
                         <p
-                            className="px-space8 sm:px-0 py-[3rem] max-w-full text-justify text-center overflow-x-hidden"
+                            className="py-[3rem] max-w-full text-justify text-center overflow-x-hidden"
                             id="text2"
                         >
                             The Venom symbiote's first human host was Spider-Man
@@ -88,7 +88,7 @@ export default function Parallax6() {
                         </p>
 
                         <p
-                            className="px-space8 sm:px-0 py-[3rem] max-w-full text-justify text-center overflow-x-hidden"
+                            className="py-[3rem] max-w-full text-justify text-center overflow-x-hidden"
                             id="text3"
                         >
                             A fan-favorite character and well-known figure in
@@ -113,7 +113,7 @@ export default function Parallax6() {
 
             <motion.div
                 className={styles.box}
-                style={{ y: y1, x: 50, width: 100, height: 100 }}
+                style={{ y: y1, x: -350, marginTop: 150, width: 100, height: 100 }}
             >
                 <img className="w-full h-full" src="/images/spaceLayer02.png" />
             </motion.div>
@@ -127,7 +127,7 @@ export default function Parallax6() {
 
             <motion.div
                 className={styles.box}
-                style={{ y: y3, x: -350 }}
+                style={{ y: y3, x: -750 }}
             >
                 <img className="w-full h-full" src="/images/spaceLayer04.png" />
             </motion.div>
@@ -141,13 +141,13 @@ export default function Parallax6() {
 
             <div style={{ height: 800 }} />
 
-            <motion.div
+            {/* <motion.div
                 animate={inView ? "visible" : "hidden"}
                 variants={variants}
                 transition={{ duration: 2, ease: "easeOut" }}
                 ref={ref}
                 className={styles.magic}
-            />
+            /> */}
 
             <div
                 id="layer-99"
