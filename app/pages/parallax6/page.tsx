@@ -21,19 +21,19 @@ export default function Parallax6() {
     const y3 = useTransform(scrollY, [0, 500], [0, -1200]);
     const scalePlanet1 = useTransform(
         scrollYProgress,
-        (value: any) => 1 / (3 * value + 1)
+        (value: any) => 1.5 * (3 * value + 1)
     );
     const scalePlanet2 = useTransform(
         scrollYProgress,
-        (value: any) => 1.5 / (5 * value + 1)
+        (value: any) => 1.5 * (5 * value + 1)
     );
     const scalePlanet3 = useTransform(
         scrollYProgress,
-        (value: any) => 1.5 / (5 * value + 1)
+        (value: any) => 1.5 * (5 * value + 1)
     );
     const scalePlanet4 = useTransform(
         scrollYProgress,
-        (value: any) => 3 / (3 * value + 1)
+        (value: any) => 3 * (3 * value + 1)
     );
 
     const [ref, inView, entry] = useInView({
@@ -144,7 +144,7 @@ export default function Parallax6() {
                 <img className="w-full h-full" src="/images/spaceLayer02.png" />
             </motion.div>
 
-            <motion.div className={styles.box} style={{ y: y2, x: 450, scale: scalePlanet3 }}>
+            <motion.div className={styles.box} style={{ y: y2, x: 450, scale: scalePlanet2 }}>
                 <img className="w-full h-full" src="/images/spaceLayer03.png" />
             </motion.div>
 

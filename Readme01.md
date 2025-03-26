@@ -64,7 +64,7 @@ Takođe bi bilo dobro konvertovati SVG u React component. Na taj način imamo ve
 
 ## Paralax efekat
 Paralax efekat je veoma popularan i često se koristi.
-Odnosi se na pojavu da se neki layeri kreću brše, a neki sporije i na taj način se stiče utisak da su neki objekti bliže, a neki dalje,
+Odnosi se na pojavu da se neki layeri kreću brše, a neki sporije i na taj način se stiče utisak da su neki objekti bliže, a neki dalje.
 Rezultat je 3D osećaj prostora.
 
 ## Framer Motion
