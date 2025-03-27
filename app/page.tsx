@@ -43,7 +43,7 @@ export default function Home() {
             <video
                 id="video"
                 className="fixed w-full h-full object-cover"
-                src="/videos/circuits42.mp4"
+                src="videos/circuits42.mp4"
                 autoPlay
                 muted
                 loop
@@ -100,7 +100,7 @@ export default function Home() {
                     >
                         <CoveredImageFlexible
                             customStyle="max-h-[100%]"
-                            imagePath="/images/consulting2.jpg"
+                            imagePath="images/consulting2.jpg"
                         />
                     </div>
 
@@ -155,7 +155,7 @@ export default function Home() {
                     >
                         <CoveredImageFlexible
                             customStyle="max-h-[100%]"
-                            imagePath="/images/rnd2.jpg"
+                            imagePath="images/rnd2.jpg"
                         />
                     </div>
 
@@ -165,7 +165,7 @@ export default function Home() {
                     >
                         <CoveredImageFlexible
                             customStyle="max-h-[100%] w-[auto]"
-                            imagePath="/images/outsorcing2.jpg"
+                            imagePath="images/outsorcing2.jpg"
                         />
                     </div>
 
@@ -260,7 +260,7 @@ export default function Home() {
                     >
                         <CoveredImageFlexible
                             customStyle="max-h-[100%] max-w-[50%]"
-                            imagePath="/images/consulting2.jpg"
+                            imagePath="images/consulting2.jpg"
                         />
                     </div>
 
@@ -292,7 +292,7 @@ export default function Home() {
                     >
                         <CoveredImageFlexible
                             customStyle="max-h-[100%] max-w-[50%]"
-                            imagePath="/images/rnd2.jpg"
+                            imagePath="images/rnd2.jpg"
                         />
                     </div>
 
@@ -324,7 +324,7 @@ export default function Home() {
                     >
                         <CoveredImageFlexible
                             customStyle="max-h-[100%] max-w-[50%]"
-                            imagePath="/images/outsorcing2.jpg"
+                            imagePath="images/outsorcing2.jpg"
                         />
                     </div>
                 </div>
