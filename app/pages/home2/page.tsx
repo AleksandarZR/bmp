@@ -82,7 +82,7 @@ export default function Home() {
                 <div id="11" className="flex flex-col justify-center items-end">
                     <CoveredImageFlexible
                         customStyle="max-h-[100%] bg-white"
-                        imagePath="/images/consulting.png"
+                        imagePath="images/consulting.png"
                     />
                 </div>
 
@@ -129,14 +129,14 @@ export default function Home() {
                 >
                     <CoveredImageFlexible
                         customStyle="max-h-[100%] bg-color0"
-                        imagePath="/images/rnd.png"
+                        imagePath="images/rnd.png"
                     />
                 </div>
 
                 <div id="31" className="flex flex-col justify-center items-end">
                     <CoveredImageFlexible
                         customStyle="max-h-[100%] w-[auto] bg-white"
-                        imagePath="/images/outsorcing.png"
+                        imagePath="images/outsorcing.png"
                     />
                 </div>
 

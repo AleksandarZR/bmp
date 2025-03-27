@@ -7,7 +7,7 @@ export default function Home1() {
             <video
                 id="video"
                 className="fixed w-full h-full object-cover"
-                src="/videos/circuits42.mp4"
+                src="videos/circuits42.mp4"
                 autoPlay
                 muted
                 loop
