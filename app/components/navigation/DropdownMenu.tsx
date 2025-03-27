@@ -3,19 +3,19 @@ import Image from "next/image";
 import hamburger2 from "@/public/svg/hamburger.svg";
 import { useClickOutside } from "@/app/hooks/useOutsideClick";
 import LogoutButtonArrow from "@/app/components/common/ButtonLogoutArrow";
-import { Session } from "next-auth";
+// import { Session } from "next-auth";
 import Arrow from "@/app/components/common/Arrow";
 import DropDownMenuItemWithSubMenu from "@/app/components/navigation/DropDownMenuItemWithSubMenu";
 import SubMenuItemLink from "@/app/components/navigation/SubMenuItemLink";
 import MenuItemLink from "@/app/components/navigation/MenuItemLink";
 
-const DropDownMenu = ({ session }: { session: Session }): JSX.Element => {
+const DropDownMenu = (/*{ session }: { session: Session }*/): JSX.Element => {
     const dropdownRef = useRef<HTMLDivElement | null>(null);
     const [dropDownVisible, setDropDownVisible] = useState(false);
 
-    useClickOutside(dropdownRef, () => {
+    /*useClickOutside(dropdownRef, () => {
         setDropDownVisible(false);
-    });
+    });*/
 
     const subMenuItemClickedHandler = () => {
         setDropDownVisible(false);
@@ -86,10 +86,11 @@ const DropDownMenu = ({ session }: { session: Session }): JSX.Element => {
                     </DropDownMenuItemWithSubMenu>
 
                     <div className="p-2">
-                        {!session && (
+                        {/* {!session && (
                             <Arrow />
                         )}
-                        {session && <LogoutButtonArrow />}
+                        {session && <LogoutButtonArrow />} */}
+                        <Arrow></Arrow>
                     </div>
                 </div>
             </div>

@@ -3,7 +3,7 @@ import Image from "next/image";
 import hamburger from "@/public/svgbforeai/hamburger.svg";
 import { useClickOutside } from "@/app/hooks/useOutsideClick";
 import LogoutButtonArrow from "@/app/components/common/ButtonLogoutArrow";
-import { Session } from "next-auth";
+// import { Session } from "next-auth";
 import Arrow from "@/app/components/common/Arrow";
 import DropDownMenuItemWithSubMenu from "@/app/components/navigation/DropDownMenuItemWithSubMenu";
 import SubMenuItemLink from "@/app/components/navigation/SubMenuItemLink";
@@ -15,13 +15,13 @@ import settingsIcon from "@/public/svgbforeai/settings.svg";
 import supportIcon from "@/public/svgbforeai/support.svg";
 import logoutIcon from "@/public/svgbforeai/logout.svg";
 
-const DropDownMenu = ({ session }: { session: Session }): JSX.Element => {
+const DropDownMenu = (/*{ session }: { session: Session }*/): JSX.Element => {
     const dropdownRef = useRef<HTMLDivElement | null>(null);
     const [dropDownVisible, setDropDownVisible] = useState(false);
 
-    useClickOutside(dropdownRef, () => {
+    /*useClickOutside(dropdownRef, () => {
         setDropDownVisible(false);
-    });
+    });*/
 
     const subMenuItemClickedHandler = () => {
         setDropDownVisible(false);

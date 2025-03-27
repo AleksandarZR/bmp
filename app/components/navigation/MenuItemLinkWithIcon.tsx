@@ -7,7 +7,7 @@ interface Properties {
     href: string;
     label: string;
     onClickHandler?: any;
-    iconPath: JSX.Element;
+    iconPath: string;
     customStyle?: string;
 }
 
