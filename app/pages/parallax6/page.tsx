@@ -141,22 +141,22 @@ export default function Parallax6() {
                     scale: scalePlanet1,
                 }}
             >
-                <img className="w-full h-full" src="/images/spaceLayer02.png" />
+                <img className="w-full h-full" src="images/spaceLayer02.png" />
             </motion.div>
 
             <motion.div className={styles.box} style={{ y: y2, x: 450, scale: scalePlanet2 }}>
-                <img className="w-full h-full" src="/images/spaceLayer03.png" />
+                <img className="w-full h-full" src="images/spaceLayer03.png" />
             </motion.div>
 
             <motion.div className={styles.box} style={{ y: y3, x: -750, scale: scalePlanet3 }}>
-                <img className="w-full h-full" src="/images/spaceLayer04.png" />
+                <img className="w-full h-full" src="images/spaceLayer04.png" />
             </motion.div>
 
             <motion.div
                 className={styles.box}
                 style={{ y: y3, x: 200, scale: scalePlanet4 }}
             >
-                <img className="w-full h-full" src="/images/spaceLayer05.png" />
+                <img className="w-full h-full" src="images/spaceLayer05.png" />
             </motion.div>
 
             <div style={{ height: 800 }} />
