@@ -137,7 +137,9 @@ export default function Parallax3() {
                         <Image
                             id="executionerBattle"
                             className="h-[500px] w-[auto]"
-                            src={executioner} />
+                            alt="Executioner"
+                            src={executioner}
+                        />
                     </motion.div>
                 </motion.div>
             </div>
