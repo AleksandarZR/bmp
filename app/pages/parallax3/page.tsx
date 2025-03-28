@@ -1,6 +1,7 @@
 'use client'
 import { motion, useScroll, useTransform, inView, useInView } from "framer-motion";
 import { useState, useRef } from "react";
+import Image from "next/image";
 import executioner from "@/public/images/executioner.png";
 import frostGiant from "@/public/images/frost-giant.png";
 import thor from "@/public/images/thor2.png";
@@ -133,10 +134,10 @@ export default function Parallax3() {
                             }
                         }
                     >
-                        <img
+                        <Image
                             id="executionerBattle"
                             className="h-[500px] w-[auto]"
-                            src="images/executioner.png" />
+                            src={executioner} />
                     </motion.div>
                 </motion.div>
             </div>
