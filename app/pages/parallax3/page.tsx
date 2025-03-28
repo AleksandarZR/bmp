@@ -22,12 +22,12 @@ export default function Parallax3() {
                 className="fixed w-full h-full z-[45] flex flex-col justify-center items-center pointer-events-none"
                 style={{ translateY: y, scale: scaleThor }}
             >
-                <img className="md:hidden sm:hidden fixed top-[25%] left-[10%] sm:left-[0%] w-[75%] sm:w-[200%] h-[auto] z-[50] pointer-events-none" src="/thor2.png" />
+                <img className="md:hidden sm:hidden fixed top-[25%] left-[10%] sm:left-[0%] w-[75%] sm:w-[200%] h-[auto] z-[50] pointer-events-none" src="thor2.png" />
                 <img className="lg:hidden fixed top-[10%] left-[10%] sm:left-[0%] w-[75%] sm:w-[200%] h-[auto] z-[50] pointer-events-none" src="images/thor.png" />
             </motion.div>
 
             <video id="video" className="w-full h-[70vh] object-cover"
-                src="/thunder3.mp4"
+                src="thunder3.mp4"
                 autoPlay
                 muted loop>
             </video>
