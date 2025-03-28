@@ -82,7 +82,7 @@ export default function Home() {
                 <div id="11" className="flex flex-col justify-center items-end">
                     <CoveredImageFlexible
                         customStyle="max-h-[100%] bg-white"
-                        imagePath="images/consulting.png"
+                        imagePath="images/consulting2.jpg"
                     />
                 </div>
 
