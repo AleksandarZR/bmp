@@ -22,7 +22,7 @@ export default function Home() {
 
             <Image
                 id="logo"
-                className="fixed top-space2"
+                className="fixed top-space2 drop-shadow-[0_2.8px_2.8px_rgba(0,0,0,0.8)]"
                 src={logo}
                 alt="Logo Hvac"
             />
