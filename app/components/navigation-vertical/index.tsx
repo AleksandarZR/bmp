@@ -18,18 +18,18 @@ const Navigation = ({ session }: any): JSX.Element => {
     return (
         <>
             {/* Desktop Navigation */}
-            <div className="md:hidden sm:hidden flex flex-col justify-start items-start h-full w-navwidth max-w-navwidth fixed top-0 left-0 z-40 bg-color0 border-b-2 drop-shadow-2xl">
+            <div className="md:hidden sm:hidden flex flex-col justify-start items-start h-full w-navwidth max-w-navwidth fixed top-0 left-0 z-40 bg-color3 border-b-2 drop-shadow-2xl">
                 <div className="w-full flex flex-col justify center items-center px-space2 py-space2">
                     <LogoDesktop session={session} />
                 </div>
 
                 <div className="mx-space2 w-[calc(var(--navwidth)-2*(var(--space2)))] h-[2px] bg-color21"></div>
 
-                <div className="px-space2 flex-grow">
+                <div className="px-0 flex-grow">
                     <MenuItems />
                 </div>
 
-                <div id="section2" className="py-space2 min-h-[50px] w-full bg-color5 flex flex-col justify-around items-center text-xs">
+                {/* <div id="section2" className="py-space2 min-h-[50px] w-full bg-color5 flex flex-col justify-around items-center text-xs">
                     <p className="pb-space2 text-color2">Connect with our sales team</p>
                     <ButtonLink text={"Get a live demo!"} link={"/"}></ButtonLink>
                 </div>
@@ -38,7 +38,7 @@ const Navigation = ({ session }: any): JSX.Element => {
                     <MenuItemLinkWithIcon href={"/pages/settings"} label={"Settings"} iconPath={settingsIcon}></MenuItemLinkWithIcon>
                     <MenuItemLinkWithIcon href={"/pages/support"} label={"Support"} iconPath={supportIcon}></MenuItemLinkWithIcon>
                     <MenuItemLinkWithIcon href={"/pages/logout"} label={"Logout"} iconPath={logoutIcon} customStyle="py-space2 bg-color23 text-color0"></MenuItemLinkWithIcon>
-                </div>
+                </div> */}
             </div>
 
             {/* Mobile Navigation */}
