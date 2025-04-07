@@ -10,12 +10,14 @@ import usersIcon from "@/public/svgbforeai/users.svg";
 
 const MenuItems = (): JSX.Element => {
     return (
-        <div className="pt-space5 flex flex-col justify-start items-start text-nowrap text-color2">
+        <div className="pt-space5 flex flex-col justify-start items-start text-nowrap text-color0">
             <MenuItemLinkWithIcon href={"/"} label={"Dashboard"} iconPath={dashboardIcon} />
-            <MenuItemLinkWithIcon href={"/pages/mybrand"} label={"My Brand"} iconPath={myBrandIcon} />
-            <MenuItemLinkWithIcon href={"/pages/threats"} label={"Threats"} iconPath={threatsIcon} />
-            <MenuItemLinkWithIcon href={"/pages/activedefense"} label={"Active Defense"} iconPath={activeDefenseIcon} />
-            <MenuItemLinkWithIcon href={"/pages/users"} label={"Users"} iconPath={usersIcon} />
+            <MenuItemLinkWithIcon href={"/pages/mybrand"} label={"Alarms"} iconPath={myBrandIcon} />
+            <MenuItemLinkWithIcon href={"/pages/threats"} label={"Assets"} iconPath={threatsIcon} />
+            <MenuItemLinkWithIcon href={"/pages/activedefense"} label={"Rules"} iconPath={activeDefenseIcon} />
+            <MenuItemLinkWithIcon href={"/pages/users"} label={"Workflow"} iconPath={usersIcon} />
+            <MenuItemLinkWithIcon href={"/pages/users"} label={"Org Settings"} iconPath={usersIcon} />
+            <MenuItemLinkWithIcon href={"/pages/users"} label={"Activity Logs"} iconPath={usersIcon} />
         </div>
     );
 };

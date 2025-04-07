@@ -16,8 +16,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-    title: "42 Core App",
-    description: "42 Core Application",
+    title: "Hvac",
+    description: "Hvac",
 };
 
 export default function RootLayout({
@@ -31,7 +31,7 @@ export default function RootLayout({
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
                 {children}
-                <Navigation />
+                {/* <Navigation /> */}
                 {/* <NavigationVertical /> */}
             </body>
         </html>
