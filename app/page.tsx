@@ -1,7 +1,7 @@
 "use client";
 import styles from "./page.module.css";
 import Image from "next/image";
-import building from "@/public/images/building01.jpg";
+import building from "@/public/images/building07.jpg";
 import logo from "@/public/images/LogoHvac.png";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
